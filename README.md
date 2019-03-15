@@ -32,7 +32,9 @@ Things you may want to cover:
 |first_name|string|null: false|
 |last_name_kana|string|null: false|
 |first_name_kana|string|null: false|
-|birthday|date|null: false|
+|birthday_year|integer|null: false|
+|birthday_month|integer|null: false|
+|birthday_day|integer|null: false|
 |postcode|varchar|null: false|
 |prefecture_id|integer|null: false|    table
 |city|varchar|null: false|
@@ -41,7 +43,7 @@ Things you may want to cover:
 |phone_number|varchar|null: false, unique: true|
 |email|varchar|null: false, unique: true|
 |password|varchar|null: false|
-|credit_card_number|varchar|null: false|
+|credit_card_number|varchar|null: false|    table
 |credit_card_exp_date|date|null: false|
 |credit_card_security_code|varchar|null: false|
 |point|integer|null: false|
@@ -71,14 +73,15 @@ Things you may want to cover:
 |price|integer|null: false|
 |comment|varchar|null: false|
 |item_image_id|varchar|null: false|    table
-|transaction_status|integer|null: false|
+|trade_status|integer|null: false|
 
 ### Association
 - belongs_to :user
+- has_one :trade
 
 ---------------------------------------------------------
 
-## transactionsテーブル
+## tradeテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -87,7 +90,8 @@ Things you may want to cover:
 |item_id|integer|null: false, foreign_key: true|
 |price|integer|null: false, foreign_key: true|
 |delivery_fee|integer|null: false|    table
-|transaction_status|integer|null: false, foreign_key: true|
+|trade_status|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
+- has_one :item
