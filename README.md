@@ -53,11 +53,12 @@ Things you may want to cover:
 
 ### Association
 - has_many :items
-- has_many :transactions
+- has_many :trades
 
 ---------------------------------------------------------
 
 ## itemsテーブル
+・商品と出品者を紐付ける
 
 |Column|Type|Options|
 |------|----|-------|
@@ -81,12 +82,12 @@ Things you may want to cover:
 
 ---------------------------------------------------------
 
-## tradeテーブル
+## tradesテーブル
+・商品と購入者を紐付ける
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id_seller|integer|null: false, foreign_key: true|
-|user_id_buyer|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 |item_id|integer|null: false, foreign_key: true|
 |price|integer|null: false, foreign_key: true|
 |delivery_fee|integer|null: false|    table
@@ -94,4 +95,4 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- has_one :item
+- belongs_to :item
