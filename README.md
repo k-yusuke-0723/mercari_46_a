@@ -73,8 +73,7 @@ Things you may want to cover:
 |estimated_shipping_date|date|null: false|
 |price|integer|null: false|
 |comment|varchar|null: false|
-|item_image_id|varchar|null: false|    table
-|trade_status|integer|null: false|
+|item_image|varchar|null: false|    table
 
 ### Association
 - belongs_to :user
@@ -91,7 +90,7 @@ Things you may want to cover:
 |item_id|refference|null: false, foreign_key: true|
 |price|refference|null: false, foreign_key: true|
 |delivery_fee|integer|null: false|    table
-|trade_status|refference|null: false, foreign_key: true|
+|trade_status|integer|null: false|
 
 ### Association
 - belongs_to :user
