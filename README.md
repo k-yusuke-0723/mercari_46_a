@@ -64,8 +64,8 @@ Things you may want to cover:
 |------|----|-------|
 |category|varchar|null: false, index: true|    table
 |brand|varchar|null: false, index: true|    table
-|item_name|varchar|null: false, index: true|
-|user_id|integer|null: false, foreign_key: true|
+|name|varchar|null: false, index: true|
+|user_id|refference|null: false, foreign_key: true|
 |state|varchar|null: false|
 |delivery_fee_payer|varchar|null: false|
 |shipping_method|varchar|null: false|
@@ -87,11 +87,11 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|item_id|integer|null: false, foreign_key: true|
-|price|integer|null: false, foreign_key: true|
+|user_id|refference|null: false, foreign_key: true|
+|item_id|refference|null: false, foreign_key: true|
+|price|refference|null: false, foreign_key: true|
 |delivery_fee|integer|null: false|    table
-|trade_status|integer|null: false, foreign_key: true|
+|trade_status|refference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
