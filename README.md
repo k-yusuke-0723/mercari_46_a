@@ -36,24 +36,22 @@ Things you may want to cover:
 |birthday_month|integer|null: false|
 |birthday_day|integer|null: false|
 |postcode|varchar|null: false|
-|prefecture_id|integer|null: false|    table
+|prefecture_id|integer|null: false|
 |city|varchar|null: false|
 |block|integer|null: false|
 |building|integer|null: false|
 |phone_number|varchar|null: false, unique: true|
 |email|varchar|null: false, unique: true|
 |password|varchar|null: false|
-|credit_card_number|varchar|null: false|    table
-|credit_card_exp_date|date|null: false|
-|credit_card_security_code|varchar|null: false|
 |point|integer|null: false|
 |point_exp_date|date|null: false|
 |biography|varchar|null: false|
-|user_image_id|varchar|null: false|    table
+|user_image|varchar|null: false|
 
 ### Association
 - has_many :items
 - has_many :trades
+- has_many :credit_cards
 
 ---------------------------------------------------------
 
@@ -73,11 +71,12 @@ Things you may want to cover:
 |estimated_shipping_date|date|null: false|
 |price|integer|null: false|
 |comment|varchar|null: false|
-|item_image|varchar|null: false|    table
+|image_id|refference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
 - has_one :trade
+- has_many :images
 
 ---------------------------------------------------------
 
@@ -88,10 +87,37 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|refference|null: false, foreign_key: true|
 |item_id|refference|null: false, foreign_key: true|
-|price|refference|null: false, foreign_key: true|
-|delivery_fee|integer|null: false|    table
+|delivery_fee|integer|null: false|
 |trade_status|integer|null: false|
 
 ### Association
 - belongs_to :user
 - belongs_to :item
+
+---------------------------------------------------------
+
+## credit_cardsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|refference|null: false, foreign_key: true|
+|credit_card_number|varchar|null: false, unique: true|
+|credit_card_exp_date|date|null: false|
+|credit_card_security_code|varchar|null: false|
+
+### Association
+- belongs_to :user
+
+---------------------------------------------------------
+
+## imagesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|item_id|refference|null: false, foreign_key: true|
+|image|varchar|null: false, unique: true|
+
+### Association
+- belongs_to :item
+
+---------------------------------------------------------
