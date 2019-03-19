@@ -1,0 +1,76 @@
+@import "reset";
+@import "./config/enviroment";
+
+.pc_header{
+  width:    100%;
+  height:   140px;
+  background-color:   gray;
+}
+
+.l-contener{
+  width:    100%;
+  height:   2000px;
+  margin:   40px auto 0;
+  // background-color: yellow;
+  background-color:  $backGray1;
+
+    &__side{
+      // float:left;
+      width:280px;
+      height: 1252px;
+      margin:0 40px 0 0;
+      // background-color: $backWhite;
+      position: absolute;
+      top: 180px;
+      left: 200px;
+
+      &__box{
+        width:248px;
+        min-height:16px;
+        display: inline-block;
+        background-color: $backWhite;
+        padding: 16px;
+        margin: 1px 0 0;
+        color: $fontDarkBlack;
+
+          &__active{
+            width:248px;
+            min-height:16px;
+            font-weight :600;
+            background-color: $backGray2;
+            padding: 16px;
+
+          .sp_awesome{
+            display: inline-block;
+            text-align: right;
+            font-size: 16px;
+          }
+
+          }
+      }
+    }
+
+.my-page{
+
+    &__head{
+        width:248px;
+        min-height:16px;
+        margin: 40px 0 0;
+        font-weight :600;
+        font-size: 16px;
+    }
+
+        &__space{
+        width:280px;
+        height:5px;
+
+    }
+}
+
+
+
+}
+
+
+
+
