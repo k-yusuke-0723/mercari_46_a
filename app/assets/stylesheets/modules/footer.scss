@@ -1,0 +1,43 @@
+footer.global-footer{
+  padding: 60px;
+  text-align: center;
+  background-color: #212121;
+  color: #fff;
+  nav{
+    width: 1020px;
+    margin: 0 auto;
+    li{
+      color: #333;
+    }
+    .footer-cell{
+      display: inline-block;
+      width: 23%;
+      vertical-align: top;
+      .footer-head{
+      color: #fff;
+      font-size: 15px;
+      }
+      h2{
+        line-height: 1.4;
+        font-weight: bold;
+      }
+      ul{
+        list-style: none;
+        li.top{
+          margin: 24px 0 0;
+          color: #333;
+        }
+        li{
+          margin: 16px 0 0;
+          color: #333;
+          font-size: 12px;
+          a{
+            display: block;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
