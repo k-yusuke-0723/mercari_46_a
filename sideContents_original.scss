@@ -1,21 +1,40 @@
 @import "reset";
 @import "./config/enviroment";
 
-    .l-contener__side{
+.pc_header{
+  width:    100%;
+  height:   140px;
+  background-color:   gray;
+}
+
+.l-contener{
+  width:   100%;
+  min-height:  1600px;
+  margin:   0 auto;
+  // background-color: yellow;
+  background-color:  $backGray1;
+
+    &__side{
+      // float:left;
       width:280px;
-      min-height: 1250px;
+      height: 1252px;
+      margin:0 40px 0 0;
+      // background-color: $backWhite;
+      position: absolute;
+      top: 180px;
+      left: 200px;
 
       &__box{
-        width:100%;
-        height: 45px;
+        width:248px;
+        min-height:16px;
         display: inline-block;
         background-color: $backWhite;
         padding: 16px;
         margin: 1px 0 0;
         color: $fontDarkBlack;
-        font-size: 14px;
+
           &__active{
-            width:100%;
+            width:248px;
             min-height:16px;
             font-weight :600;
             background-color: $backGray2;
@@ -46,4 +65,8 @@
         height:5px;
 
     }
+}
+
+
+
 }
