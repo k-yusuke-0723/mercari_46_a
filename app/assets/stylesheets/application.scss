@@ -1,5 +1,16 @@
 @import "./reset";
+@import "./config/variables";
+@import "./base";
+@import "font-awesome";
 @import "modules/header";
 @import "modules/sideContents";
 @import "modules/app-banner";
-@import "modules/footer"
+@import "modules/footer";
+
+// ユーザログオンページ－scss
+@import "modules/userFootter";
+@import "modules/userHeader";
+@import "modules/userLogin";
+@import "modules/signUp";
+
+

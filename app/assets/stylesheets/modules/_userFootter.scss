@@ -1,0 +1,35 @@
+.ident-footter{
+  width:    100%;
+  background-color:   $backGray1;
+
+    &__single{
+      width:  456px;
+      height: 220px;
+      margin: auto;
+      padding: 40px 0 ;
+      text-align: center;
+
+      li {
+        display: inline-block;
+        margin: 0 0 0 16px;
+      }
+
+      a {
+        color: $fontDarkBlack;
+        font-size:  12px;
+        text-decoration: none;
+        touch-action: manipulation;
+        display: inline-block;
+      }
+
+      &__logo{
+        display: inline-block;
+        margin:40px 0 0;
+      }
+
+      p {
+        margin-top: 5px;
+        font-size: 8px;
+      }
+    }
+}
