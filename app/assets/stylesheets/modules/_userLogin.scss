@@ -1,0 +1,193 @@
+.ident-main{
+  width:    100%;
+  background-color:   $backGray1;
+
+  &__login-noacc{
+    width:    328px;
+    background-color:   white;
+    margin: auto;
+    text-align: center;
+    padding:40px 64px;
+
+    &__text-alert{
+      text-align: center;
+      font-size: 16px;
+      margin: auto;
+
+    }
+
+    &__new-btn{
+      background-color:$linkBlue ;
+      width:  328px;
+      height: 42px;
+      color: white;
+      margin:8px 0 0 0;
+      line-height: 48px;
+    }
+  }
+
+
+  &__login-form{
+    width:    456px;
+    background-color:   white;
+    margin: auto;
+    text-align: center;
+    padding:24px 64px 32px 64px;
+
+    &__text-center{
+      font-weight:bold;
+      text-align: center;
+      font-size: 16px;
+      margin: auto;
+    }
+
+    &__fb-btn{
+      background-color:$facebookBlue ;
+      width:  328px;
+      height: 50px;
+      color: white;
+      margin:16px 0 0;
+      line-height: 48px;
+
+      &__icon{
+        font-size: 16px;
+        display: inline-block;
+        font-size: 25px;
+        text-align: left;
+        position: relative;
+        right: 60px;
+      }
+
+
+    }
+
+    &__ggl-btn{
+      width:  328px;
+      height: 48px;
+      margin:16px 0 0;
+      line-height: 48px;
+      border-style: solid;
+      border: #979797 solid 1px;
+
+      &__icon{
+        display: inline-block;
+        right: 70px;
+        position: relative;
+        top: 4px;
+      }
+
+
+    }
+
+    &__form-group{
+      margin: 24px 0 0;
+
+      &__inform{
+        width:  328px;
+        height: 48px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: #ccc solid 1px;
+        padding: 10px 16px 8px;
+      }
+
+      &__rc-anc{
+        width:  300px;
+        height: 74px;
+        border-radius: 4px;
+        border: #ccc solid 1px;
+        background-color:   $backGray1;
+        text-align: left;
+
+        &__cbox{
+          display: inline-block;
+          width:  26px;
+          height: 26px;
+          border: #ccc solid 2px;
+          background-color: white;
+          margin: 21px 10px;
+          border-radius: 1px;
+        }
+
+        &__ctext{
+          display: inline-block;
+          font-size: 15px;
+          margin: auto;
+          vertical-align: top;
+          margin: 21px 0;
+        }
+
+        &__footter{
+          display: inline-block;
+          margin: 0;
+          width: 74px;
+          height: 70px;
+          vertical-align: top;
+
+            &__logo-img{
+              display: inline-block;
+              background-image: url(https://www.gstatic.com/recaptcha/api2/logo_48.png);
+              height: 32px;
+              width: 32px;
+              background-size: 32px;
+              margin: 10px 0 0 20px;
+            }
+
+             &__logo-text{
+              display: inline-block;
+              margin: 5px 5px 0 10px;
+              font-size: 6px;
+            }
+
+             &__logo-text2{
+              display: inline-block;
+              width: 100px;
+              font-size: 4px;
+              position: relative;
+              right: 30px;
+
+              &__b1{
+                position: relative;
+                right: 2px;
+                display: inline-block;
+              }
+
+              &__b2{
+                position: relative;
+                right: 3px;
+                display: inline-block;
+              }
+
+              &__b3{
+                position: relative;
+                right: 3px;
+                display: inline-block;
+              }
+
+            }
+
+
+        }
+      }
+
+    &__login-btn{
+      background-color: $loginRed ;
+      width:  328px;
+      height: 50px;
+      color: white;
+      margin:16px 0 0;
+      line-height: 48px;
+    }
+
+    &__pass-forget{
+      color: white;
+      margin:40px 0 0;
+      color: $linkBlue;
+      font-size: 14px;
+      text-align: left;
+    }
+
+   }
+  }
+}
+
