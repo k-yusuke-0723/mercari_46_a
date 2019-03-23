@@ -3,8 +3,8 @@ root 't#index'
 
   devise_for :users
   get 't' => 't#index'
-  get 'usercheck' => 't#usercheck'
-  get 'signup' => 't#signup'
-  get 'login' => 't#login'
+  get 'usercheck' => 'test_views#usercheck'
+  get 'signup' => 'test_views#signup'
+  get 'login' => 'test_views#login'
 
 end
