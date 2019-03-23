@@ -3,7 +3,7 @@
   background-color:   $backGray1;
 
   &__login-noacc{
-    width:    328px;
+    width:    456px;
     background-color:   white;
     margin: auto;
     text-align: center;
@@ -11,7 +11,7 @@
 
     &__text-alert{
       text-align: center;
-      font-size: 16px;
+      font-size: 14px;
       margin: auto;
 
     }
@@ -75,8 +75,6 @@
         position: relative;
         top: 4px;
       }
-
-
     }
 
     &__form-group{
