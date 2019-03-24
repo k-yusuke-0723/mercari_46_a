@@ -4,7 +4,7 @@
   background-color:   $backGray1;
 
   &__login-form{
-    width:    668px;
+    width:    700px;
     background-color:   white;
     margin: auto;
     text-align: center;
@@ -26,7 +26,7 @@
 
 
   &__login-form2{
-    width:    572px;
+    width:    700px;
     background-color:   white;
     margin: auto;
     text-align: center;
@@ -39,6 +39,14 @@
       color: black;
       margin:auto;
       line-height: 48px;
+
+      &__icon{
+        font-size: 25px;
+        display: inline-block;
+        position: relative;
+        right: 50px;
+        color: gray;
+      }
     }
 
     &__fb-btn{
