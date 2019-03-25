@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :test_views do
-    get :creditcard
-  end
+  resources :credit_card, only: [:new]
 end
