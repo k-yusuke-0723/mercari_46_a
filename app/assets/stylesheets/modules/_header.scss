@@ -12,14 +12,6 @@ ul {
   list-style: none;
 }
 
-// i {
-//   display: inline-block;
-//    position: relative;
-//    bottom: 30px;
-//    left: 830px;
-//    color: grey;
-// }
-
 h2 {
   font-size: 14px;
   line-height: 1.4;
@@ -32,10 +24,6 @@ a {
 
 form {
   display: block;
-}
-
-.icon-search:before {
-  content: '\e024';
 }
 
 .input-default {
@@ -86,7 +74,7 @@ form {
       padding: 9px 32px 9px 8px;
       background: #fafafa;
     }
-    .icon-search {
+    .fa-search {
       position: absolute;
       top: 0;
       right: 0;
@@ -167,3 +155,81 @@ form {
   color: #0099e8;
 }
 
+.header-user-nav{
+  font-size: 0;
+  li:first-child {
+    padding: 0;
+  }
+  li {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 16px;
+    vertical-align: middle;
+  }
+  .sp-header-user-icon {
+    margin: 0;
+    figure {
+      line-height: 0;
+    }
+    div {
+      display: inline-block;
+      margin: 0 0 0 8px;
+      font-size: 14px;
+      vertical-align: middle;
+    }
+  }
+  a {
+    display: block;
+    font-size: 14px;
+    color: #333;
+  }
+  .icon-bell {
+    font-size:17px;
+  }
+}
+
+.sp-header-user-icon {
+  figure {
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+    vertical-align: middle;
+    div {
+      overflow: hidden;
+      border-radius: 50%;
+    }
+  }
+}
+
+.header-user-nav {
+  i {
+    vertical-align: middle;
+  }
+  span {
+    vertical-align: middle;
+  }
+  .icon-check {
+    font-size: 16px;
+  }
+  li>a span {
+    margin: 0 0 0 8px;
+  }
+}
+
+.header-notification-box {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.header-user-box {
+  position: absolute;
+  top: 38px;
+  z-index: 1;
+  display: none;
+  width: 320px;
+  background: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+  font-size: 14px;
+}
