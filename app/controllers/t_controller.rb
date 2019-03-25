@@ -1,8 +1,6 @@
 class TController < ApplicationController
-  def index
-  end
 
-  def userCheck
+  def index
   end
 
 end

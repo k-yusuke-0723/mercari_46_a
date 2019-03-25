@@ -10,22 +10,34 @@
         padding: 16px;
         margin: 1px 0 0;
         color: $fontDarkBlack;
-        font-size: 14px;
+        font-size: 13px;
+          &__awe {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            font-size: 16px;
+            color:  $btnGray2;
+            float: right;
+          }
           &__active{
             width:100%;
             min-height:16px;
             font-weight :600;
             background-color: $backGray2;
             padding: 16px;
-
-          .sp_awesome{
+            color: $fontDarkBlack;
+            font-size: 13px;
+          }
+          &__awe2 {
             display: inline-block;
-            text-align: right;
+            width: 20px;
+            height: 20px;
             font-size: 16px;
+            margin-left: 155px;
+            color:  $btnGray2;
+            float: right;
           }
-
-          }
-      }
+       }
     }
 
 .my-page{
