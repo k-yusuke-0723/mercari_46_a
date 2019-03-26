@@ -1,0 +1,163 @@
+@import "reset";
+
+.wrapper{
+  background-color: #f5f5f5;
+  .l-container{
+    display: flex;
+    margin: 0 auto;
+    padding-top: 40px;
+    width: 1020px;
+    .l-content{
+      width: 1020px;
+      margin-left: 40px;
+      padding: 50px 0 24px 0;
+      background-image: url("https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?66975585");
+      position: relative;
+      .mypage-user-icon{
+        height: 200px;
+        width: 700px;
+        padding: 20px;
+        position: absolute;
+        top: 50px;
+        figre{
+          img{
+            border-radius: 50%;
+            margin-left: 300px;
+          }
+          h2.name{
+            text-align: center;
+            font-weight: bold;
+            font-size: 15px;
+          }
+        }
+        .mypage-number{
+          display: flex;
+          text-align: center;
+          margin-top: 8px;
+          margin-left: 280px;
+          font-size: 14px;
+          .exhibit{
+            margin-left: 16px;
+          }
+        }
+      }
+      .mypage-tab-container-notification-todo{
+        background-color: white;
+        margin-top: 150px;
+        ul.mypage-tabs{
+          display: flex;
+          font-size: 16px;
+          font-weight: bold;
+          height: 74px;
+          line-height: 74px;
+          text-align: center;
+          .notice{
+            width: 350px;
+            margin: 0 auto;
+            border-top: solid 2px red;
+          }
+          .todo{
+            width: 350px;
+            background-color: #eee;
+          }
+        }
+        .tab-content{
+          font-size: 14px;
+          background-color: #f5f5f5;
+          ul#mypage-tab-notification{
+            li{
+              background-color: white;
+              padding: 16px;
+              margin-bottom: 1px;
+              position: relative;
+              figure{
+                // display: flex;
+                .lazyloaded{
+                  display: inline-block;
+                  height: 48px;
+                  float: left;
+                }
+                .mypage-item-text{
+                  display: inline-block;
+                  vertical-align: middle;
+                  width: 600px;
+                  margin-left: 10px;
+                }
+                .notice-time{
+                  color: gray;
+                  margin-left: 65px;
+                }
+              }
+              .fa-chevron-right{
+                position: absolute;
+                top: 50%;
+                right: 15px;
+              }
+            }
+            .mypage-go-list{
+               background-color: #fff;
+               padding: 16px;
+               list-style: none;
+               margin: 0 auto;
+               text-align: center;
+               line-height: 56px;
+              &-link {
+                width: 668px;
+                height: 56px;
+                background-color: #eee;
+                a:link{
+                color: black;
+                }
+              }
+            }
+          }
+        }
+      }
+      .mypage-tab-container{
+        margin-top: 40px;
+        background-color: white;
+        width: 700px;
+        font-size: 16px;
+        h2.mypage-tab-head{
+          display: block;
+          padding-left: 10px;
+          height: 74px;
+          font-weight: bold;
+          line-height: 74px;
+          background-color: #fafafa;
+        }
+        ul.mypage-tabs{
+          display: flex;
+          font-weight: bold;
+          height: 74px;
+          line-height: 74px;
+          text-align: center;
+          li{
+            width: 350px;
+            text-align: center;
+            .trading{
+              border-top: solid 2px red;
+            }
+            .history{
+              background-color: #eee;
+            }
+          }
+        }
+        .tab-content{
+          .mypage-item-not-found{
+            padding: 160px 0 60px;
+            background: url("https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?32807650");
+            background-repeat: no-repeat;
+            background-position: center 40px;
+            background-size: 78px 85px;
+            text-align: center;
+            font-size: 16px;
+            color: #ccc;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
