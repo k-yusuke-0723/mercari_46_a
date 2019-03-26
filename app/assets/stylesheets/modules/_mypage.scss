@@ -1,7 +1,5 @@
-@import "reset";
-
 .wrapper{
-  background-color: #f5f5f5;
+  background-color: backGray1;
   .l-container{
     display: flex;
     margin: 0 auto;
@@ -63,7 +61,7 @@
         }
         .tab-content{
           font-size: 14px;
-          background-color: #f5f5f5;
+          background-color: backGray1;
           ul#mypage-tab-notification{
             li{
               background-color: white;
