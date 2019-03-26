@@ -10,6 +10,9 @@
 @import "modules/headerlogin";
 @import "modules/breadcrumbs";
 
+// カメラボタン
+@import "modules/camera";
+
 // ユーザログオン関連ページ－scss
 @import "modules/userfootter";
 @import "modules/userheader";
@@ -19,4 +22,5 @@
 // トップページ属性
 @import "modules/toppage";
 
-
+// マイページ
+@import "modules/mypage";
