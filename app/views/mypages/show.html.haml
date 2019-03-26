@@ -3,22 +3,22 @@
 .wrapper
   .l-container
     = render "shared/sidecontent"
-    .l-content
-      .mypage-user-icon
-        %figre
-          %img{height: "60", src: "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", width: "60"}
-          %h2.name 隅川裕介
-        .mypage-number
-          .evaluation 評価 0
-          .exhibit 出品数 0
-      .mypage-tab-container-notification-todo
-        %ul.mypage-tabs
-          %li.active
-            .notice お知らせ
+    .mypage
+      .mypage__icon
+        %figure.mypage__icon__figure
+          %img.mypage__icon__figure__img{height: "60", src: "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", width: "60"}
+          %h2.mypage__icon__figure__name 隅川裕介
+        .mypage__icon__number
+          .mypage__icon__number__evaluation 評価 0
+          .mypage__icon__number__exhibit 出品数 0
+      .mypage__container
+        %ul.mypage__container__tabs
           %li
-            .todo やることリスト
-        .tab-content
-          %ul#mypage-tab-notification
+            .mypage__container__tabs__notice お知らせ
+          %li
+            .mypage__container__tabs__todo やることリスト
+        .mypage__container__tabs-content
+          %ul.mypage__container__tabs-content__notification
             %li
               .mypage-item-link
                 %figure
@@ -58,16 +58,16 @@
             %li.mypage-go-list
               .mypage-go-list-link
                 = link_to "一覧を見る", "/jp/mypage/purchased/"
-      .mypage-tab-container
-        %h2.mypage-tab-head 購入した商品
-        %ul.mypage-tabs
-          %li
-            .trading 取引中
-          %li
-            .history 過去の取引
-        .tab-content
-          %ul.mypage-tab-transaction-now
-            %li.mypage-item-not-found 取引中の商品がありません
+      .mypage__container__history
+        %h2.mypage__container__history__head 購入した商品
+        %ul.mypage__container__history__tabs
+          %li.mypage__container__history__tabs__tab
+            .mypage__container__history__tabs__tab__trading 取引中
+          %li.mypage__container__history__tabs__tab
+            .myapge__container__history__tabs__tab__history 過去の取引
+        .mypage__container__history__content
+          %ul.mypage__container__history__content__now
+            %li.mypage__container__history__content__nofound 取引中の商品がありません
 = render "shared/app-banner"
 = render "shared/footer"
 = render "shared/camera"

@@ -5,71 +5,70 @@
     margin: 0 auto;
     padding-top: 40px;
     width: 1020px;
-    .l-content{
+    .mypage{
       width: 1020px;
       margin-left: 40px;
       padding: 50px 0 24px 0;
       background-image: url("https://www.mercari.com/jp/assets/img/mypage/user-bg.jpg?66975585");
       position: relative;
-      .mypage-user-icon{
+      &__icon{
         height: 200px;
         width: 700px;
         padding: 20px;
         position: absolute;
         top: 50px;
-        figre{
-          img{
+        &__figure{
+          &__img{
             border-radius: 50%;
             margin-left: 300px;
           }
-          h2.name{
+          &__name{
             text-align: center;
             font-weight: bold;
             font-size: 15px;
           }
         }
-        .mypage-number{
+        &__number{
           display: flex;
           text-align: center;
           margin-top: 8px;
           margin-left: 280px;
           font-size: 14px;
-          .exhibit{
+          &__exhibit{
             margin-left: 16px;
           }
         }
       }
-      .mypage-tab-container-notification-todo{
+      &__container{
         background-color: white;
         margin-top: 150px;
-        ul.mypage-tabs{
+        &__tabs{
           display: flex;
           font-size: 16px;
           font-weight: bold;
           height: 74px;
           line-height: 74px;
           text-align: center;
-          .notice{
+          &__notice{
             width: 350px;
             margin: 0 auto;
             border-top: solid 2px red;
           }
-          .todo{
+          &__todo{
             width: 350px;
             background-color: #eee;
           }
         }
-        .tab-content{
+        &__tabs-content{
           font-size: 14px;
           background-color: backGray1;
-          ul#mypage-tab-notification{
+          &__notification{
             li{
               background-color: white;
               padding: 16px;
               margin-bottom: 1px;
               position: relative;
               figure{
-                // display: flex;
                 .lazyloaded{
                   display: inline-block;
                   height: 48px;
@@ -111,12 +110,12 @@
           }
         }
       }
-      .mypage-tab-container{
+      &__container__history{
         margin-top: 40px;
         background-color: white;
         width: 700px;
         font-size: 16px;
-        h2.mypage-tab-head{
+        &__head{
           display: block;
           padding-left: 10px;
           height: 74px;
@@ -124,25 +123,25 @@
           line-height: 74px;
           background-color: #fafafa;
         }
-        ul.mypage-tabs{
+        &__tabs{
           display: flex;
           font-weight: bold;
           height: 74px;
           line-height: 74px;
           text-align: center;
-          li{
+          &__tab{
             width: 350px;
             text-align: center;
-            .trading{
+            &__trading{
               border-top: solid 2px red;
             }
-            .history{
+            &__history{
               background-color: #eee;
             }
           }
         }
-        .tab-content{
-          .mypage-item-not-found{
+        &__content{
+          &__now{
             padding: 160px 0 60px;
             background: url("https://www.mercari.com/jp/assets/img/common/common/logo-gray-icon.svg?32807650");
             background-repeat: no-repeat;
