@@ -3,14 +3,20 @@
 @import "./base";
 @import "font-awesome";
 @import "modules/header";
-@import "modules/sideContents";
+@import "modules/sidecontents";
 @import "modules/app-banner";
 @import "modules/footer";
+@import "modules/creditcard";
+@import "modules/headerlogin";
+@import "modules/breadcrumbs";
 
-// ユーザログオンページ－scss
-@import "modules/userFootter";
-@import "modules/userHeader";
-@import "modules/userLogin";
-@import "modules/signUp";
+// ユーザログオン関連ページ－scss
+@import "modules/userfootter";
+@import "modules/userheader";
+@import "modules/userlogin";
+@import "modules/signup";
+
+// トップページ属性
+@import "modules/toppage";
 
 

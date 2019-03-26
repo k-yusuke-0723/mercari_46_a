@@ -1,0 +1,30 @@
+= render "shared/header"
+.top-banner
+.pickup-cont
+  .pickup-cont__thema ピックアップカテゴリー
+  .pickup-cont__item
+    .pickup-cont__item__subtext レディース 新着アイテム
+    .pickup-cont__item__flame
+      - 4.times do |timesCount|
+        = render "shared/itembox"
+      .pickup-cont__item__flame__linktext すべての商品をみる
+  .pickup-cont__item
+    .pickup-cont__item__subtext メンズ 新着アイテム
+    .pickup-cont__item__flame
+      - 4.times do |timesCount|
+        = render "shared/itembox"
+      .pickup-cont__item__flame__linktext すべての商品をみる
+  .pickup-cont__thema ピックアップブランド
+  .pickup-cont__item
+    .pickup-cont__item__subtext シュプリーム 新着アイテム
+    .pickup-cont__item__flame
+      - 4.times do |timesCount|
+        = render "shared/itembox"
+      .pickup-cont__item__flame__linktext すべての商品をみる
+  .pickup-cont__item
+    .pickup-cont__item__subtext ヴィトン 新着アイテム
+    .pickup-cont__item__flame
+      - 4.times do |timesCount|
+        = render "shared/itembox"
+      .pickup-cont__item__flame__linktext すべての商品をみる
+= render "shared/footer"
