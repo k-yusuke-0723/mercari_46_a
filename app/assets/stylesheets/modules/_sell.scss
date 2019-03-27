@@ -1,0 +1,294 @@
+.single-container {
+  padding: 0 0 220px;
+  position: relative;
+  background: rgb(245, 245, 245);
+}
+
+.visible-pc {
+  display: block;
+}
+
+pre {
+  overflow: auto;
+}
+
+.sell-sub-head {
+  color: #888;
+  font-size: 14px;
+  float: left;
+}
+
+.l-left {
+  float: left
+}
+
+.l-right {
+  float: right;
+}
+
+.clearfix {
+  overflow: hidden;
+}
+
+.btn-gray {
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+}
+
+.fee {
+  height: 63px;
+}
+
+.sell-upload-head+p {
+  margin: 8px 0 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.single-header {
+  height: 128px;
+  text-align: center;
+  h1 {
+    margin: 40px 0 0;
+    display: inline-block;
+  }
+  a {
+    width: 185px;
+    height: 49px;
+    line-height: 49px;
+    display: inline-block;
+    margin: 0 8px 0 0;
+  }
+}
+
+.main {
+  display: block;
+}
+
+.l-single {
+  &-container {
+  width: 700px;
+  margin: 0 auto;
+  background: #fff;
+  }
+  &-head {
+    padding: 32px 16px;
+    font-size: 22px;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+.sell {
+  &-form {
+  border-top: 1px solid #eee;
+  overflow: hidden;
+  }
+  &-upload-box {
+    width: 620px;
+    padding: 40px;
+    overflow: hidden;
+    height: 303px;
+  }
+  &-upload-head {
+    font-size: 16px;
+  }
+  &-dropbox-container.state-image-number-10 {
+    display: block;
+    width: 620px;
+    margin: 16px auto 0;
+    height: 162px;
+    .sell-upload-items-container {
+      display: inline;
+      .sell-upload-items {
+        display: inline;
+        float: left;
+        ul {
+          display: inline;
+        }
+      }
+    }
+    .sell-upload-drop-box {
+      position: relative;
+      min-height: 162px;
+      background: #f5f5f5;
+      border: 1px dashed #ccc;
+      font-size: 0;
+      text-align: center;
+      float: right;
+      padding: 40px;
+      &.have-item-0 {
+        width: 100%;
+        margin-left: 0;
+      }
+      pre {
+        position: absolute;
+        top: 50%;
+        left: 16px;
+        right: 16px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+        transform: translate(0, -50%);
+        pointer-events: none;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+    }
+  }
+}
+
+.sell-upload-drop-box {
+  .icon-camera {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+  }
+}
+
+
+.sell-content {
+  padding: 40px;
+  border-top: 1px solid #eee;
+  overflow: hidden;
+}
+
+.form-group {
+  overflow: hidden;
+  label+ {
+    .textarea-default {
+      margin: 8px 0 0;
+    }
+  }
+}
+
+.textarea-default {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 104px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+textarea {
+  border-radius: 0;
+  border: 0;
+  outline: 0;
+}
+
+.select-wrap {
+  .icon-arrow-bottom {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    z-index: 2;
+    color: #888;
+    font-size: 8px;
+    transform: translate(0, -50%);
+  }
+}
+
+.sell-form-box {
+  float: right;
+  width: 400px;
+  margin: 0;
+}
+.sell-price {
+  li {
+    padding: 24px 0;
+    border-top: 1px solid #ccc;
+    &:first-child {
+      padding: 0 0 24px;
+      border: 0;
+    }
+  }
+  .form-group {
+    .l-left {
+      width: 50%;
+      line-height: 48px;
+    }
+    .l-right {
+      width: 50%;
+    }
+  }
+  &-input {
+    text-align: right;
+    .input-default {
+      margin: 0;
+      text-align: right;
+    }
+    &>div {
+      display: inline-block;
+      width: 80%;
+      margin: 0 0 0 5%;
+    }
+  }
+  .bold {
+    .l-left {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .l-right {
+      font-weight: 600;
+    }
+  }
+}
+
+.sell-btn-box {
+  p {
+    line-height: 1.5;
+  }
+  .btn {
+    &-red {
+    margin: 40px 0 0;
+    }
+    &-gray {
+    width: 45%;
+    margin: 24px auto 0;
+    }
+  }
+}
+
+.single-footer {
+  width: 456px;
+  height: 220px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 40px 0;
+  text-align: center;
+  li {
+    margin: 0 0 0 16px;
+    font-size: 12px;
+    display: inline-block;
+    &:first-child {
+      margin: 0;
+    }
+  }
+  a {
+    display: block;
+    color: #333;
+  }
+  &-logo {
+    width: 80px;
+    height: 65px;
+    margin: 40px auto 0;
+  }
+  p {
+    margin: 8px 0 0;
+  }
+  small {
+    font-size: 13px;
+  }
+}
