@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :credit_card, only: [:new]
 
   resources :sells, only: [:new]
-
+  resources :items
 
   resources :users do
     get :logout, on: :member
