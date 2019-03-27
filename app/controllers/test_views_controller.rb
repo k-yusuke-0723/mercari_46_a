@@ -9,6 +9,9 @@ class TestViewsController < ApplicationController
   def login
   end
 
+  def logout
+  end
+
   def top
   end
 
