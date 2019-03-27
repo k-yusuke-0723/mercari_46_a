@@ -10,13 +10,25 @@
 @import "modules/headerlogin";
 @import "modules/breadcrumbs";
 
+// カメラボタン
+@import "modules/camera";
+
 // ユーザログオン関連ページ－scss
 @import "modules/userfootter";
 @import "modules/userheader";
 @import "modules/userlogin";
 @import "modules/signup";
+@import "modules/logout";
 
 // トップページ属性
 @import "modules/toppage";
 
+
+// 商品詳細ページ表示
+@import "modules/product";
+
+
+// マイページ
+@import "modules/mypage";
+@import "modules/profile";
 
