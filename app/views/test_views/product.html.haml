@@ -1,0 +1,136 @@
+%title 商品詳細ページ - メルカリ スマホでかんたん フリマアプリ
+.contents
+  = render "shared/header"
+  .product-contents
+    .product-contents__flame
+      .product-contents__flame__thema リンツ リンドールチョコレート 3パック ✳送料込
+      / 画像表示、テーブル表示フレーム開始
+      .product-contents__flame__tbox
+        / 画像表示セクション
+        .product-contents__flame__tbox__img
+          %img.product-contents__flame__tbox__img__disp__gon{ src: "https://static.mercdn.net/item/detail/orig/photos/m58631725066_1.jpg?1551666630"}/
+          .product-contents__flame__tbox__img__slide
+            .product-contents__flame__tbox__img__slide__mini
+              %img{src: "https://static.mercdn.net/item/detail/orig/photos/m58631725066_1.jpg?1551666630"}/
+            .product-contents__flame__tbox__img__slide__mini
+              %img{src: "https://static.mercdn.net/item/detail/orig/photos/m58631725066_2.jpg?1551666630"}/
+            .product-contents__flame__tbox__img__slide__mini
+            .product-contents__flame__tbox__img__slide__mini
+        / テーブル表示セクション
+        .product-contents__flame__tbox__tab
+          %table.product-contents__flame__tbox__tab__to{ border: "1", bordercolor: "#f5f5f5", height: "375"}
+            %tr
+              %th 出品者
+              %td{align: "left"}
+                %span テストユーザ
+                .product-contents__flame__tbox__tab__to__rat
+                  .product-contents__flame__tbox__tab__to__rat__icon-a
+                    %i.fas.fa-laugh
+                  .product-contents__flame__tbox__tab__to__rat__xa 527
+                  .product-contents__flame__tbox__tab__to__rat__icon-b
+                    %i.fas.fa-meh
+                  .product-contents__flame__tbox__tab__to__rat__xa 3
+                  .product-contents__flame__tbox__tab__to__rat__icon-c
+                    %i.fas.fa-frown
+                  .product-contents__flame__tbox__tab__to__rat__xa 0
+            %tr
+              %th カテゴリー
+              %td{align: "left"}
+                %p その他
+                %i.fas.fa-chevron-right
+                %span 食品
+                %br/
+                %i.fas.fa-chevron-right
+                %span 菓子
+            %tr
+              %th ブランド
+              %td{align: "left"}
+            %tr
+              %th 商品の状態
+              %td{align: "left"}
+                %span 新品、未使用
+            %tr
+              %th 商品の状態
+              %td{align: "left"}
+                %span 新品、未使用
+            %tr
+              %th 配送料の負担
+              %td{align: "left"}
+                %span 送料込み(出品者負担)
+            %tr
+              %th 配送の方法
+              %td{align: "left"}
+                %span ゆうゆうメルカリ便
+            %tr
+              %th 配送元地域
+              %td{align: "left"}
+                %span 北海道
+            %tr
+              %th 発送日の目安
+              %td{align: "left"}
+                %span 2~3日で発送
+      / 画像、テーブル表記タグ終了
+      .product-contents__flame__valbox
+        .product-contents__flame__valbox__value ¥1,700
+        .product-contents__flame__valbox__tax (税込)
+        .product-contents__flame__valbox__post 送料込み
+      / 購入ボタン
+      .product-contents__flame__buy
+        .product-contents__flame__buy__xa 購入画面に進む
+      / 商品説明文
+      .product-contents__flame__desc
+        %span
+          リンドールチョコレート3パック(1袋60ｇ入り・5粒)
+          %br/
+          お好きなのを3パック選んでください。
+          %br/
+          ※リンドール抹茶・キャラメルsold out
+          %br/
+          \#ストロベリー
+          %br/
+          \#ココナッツ
+          %br/
+          \#ミルク＆ホワイト
+      / 商品説明文
+      .product-contents__flame__footer
+        .product-contents__flame__footer__box
+          .product-contents__flame__footer__box__xa
+            %i.far.fa-heart
+            いいね!
+        .product-contents__flame__footer__box2
+          .product-contents__flame__footer__box2__xa
+            %i.far.fa-flag
+            不適切な商品の報告
+        .product-contents__flame__footer__box3
+          .product-contents__flame__footer__box3__xa
+            %i.fas.fa-unlock-alt
+            あんしん・あんぜんへの取り組み
+    / 商品へのコメント欄
+    .product-contents__comment
+      .product-contents__comment__alert 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %textarea{cols: "90", name: "", rows: "4"}
+      %span{style: "color:red"} 入力してください
+      .product-contents__comment__greybtn コメントする
+    / 別ページリンク欄(同じ出品をしている場合)
+    .product-contents__li
+      .product-contents__li__xa-l
+        %i.fas.fa-chevron-left
+        MAC スモールアイシャドウ
+      .product-contents__li__xa-r
+        洗濯機 振動防止 ✳ 送料込
+        %i.fas.fa-chevron-right
+    / 別ページリンク欄(フェイスブックなど)
+    .product-contents__li-2
+      .product-contents__li-2__box
+        .product-contents__li-2__box__b1
+          %i.fab.fa-facebook
+        .product-contents__li-2__box__b2
+          %i.fab.fa-twitter-square
+        .product-contents__li-2__box__b3
+          %i.fab.fa-pinterest-square
+    .pickup-cont__item__subtext テストユーザさんのその他の出品
+    .pickup-cont__item__flame
+      - 4.times do |timesCount|
+        = render "shared/itembox"
+= render "shared/app-banner"
+= render "shared/footer"

@@ -1,0 +1,275 @@
+.product-contents{
+    background-color:$backGray1;
+    width :   100%;
+    height:   2000px;
+
+  &__flame{
+    width: 700px;
+    background-color: white;
+    text-align: center;
+    margin: 40px auto 0 auto;
+    padding: 24px 40px 40px;
+
+    &__thema{
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    &__tbox{
+      margin: 16px 0 0 0;
+      width:  620px;
+      height: 375px;
+
+      &__img{
+          background-color: $backGray1;
+          width: 300px;
+          height: 375px;
+          position: relative;
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 15px;
+
+        &__disp{
+          display: inline-block;
+          width: 300px;
+          height: 300px;
+          &__gon{
+            width: 300px;
+            height: 300px;
+          }
+        }
+        &__slide{
+          display: inline-block;
+          width: 100%;
+          height: 75px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          &__mini{
+            img {
+              width: 75px;
+              height: 75px;
+              float: left;
+              background-color: $backGray1;
+            }
+          }
+        }
+      }
+      &__tab{
+        width:  300px;
+        height: 375px;
+        display: inline-block;
+
+        &__to{
+
+          &__rat{
+            width: 165px;
+            height: 25px;
+            text-align: center;
+            margin: 5px 0 0 10px ;
+            &__icon-a{
+              display: inline-block;
+              width: 16px;
+              height: 16px;
+              color: #ef5185;
+              font-size: 18px;
+              position:relative;
+              right: 20px;
+              vertical-align: top;
+            }
+            &__icon-b{
+              display: inline-block;
+              width: 16px;
+              height: 16px;
+              margin: 0 0 0 16px;
+              color: #fba933;
+              font-size: 18px;
+              position:relative;
+              right: 20px;
+              vertical-align: top;
+            }
+
+            &__icon-c{
+              display: inline-block;
+              width: 16px;
+              height: 16px;
+              margin: 0 0 0 16px;
+              color: #6ab5d8;
+              font-size: 18px;
+              position:relative;
+              right: 20px;
+              vertical-align: top;
+            }
+            &__xa{
+              display: inline-block;
+              font-size: 12px;
+              position: relative;
+              vertical-align: top;
+              right: 10px;
+              top: 5px;
+            }
+          }
+          th {
+            background-color:$backGray3;
+            width: 117px;
+            padding: 8px;
+          }
+          td {
+            background-color: white;
+            width: 183px;
+            padding: 8px;
+          }
+        }
+      }
+    }
+    // 購入表示
+    &__valbox{
+      width: 620px;
+      margin: 24px 0 0;
+      display: inline-block;
+      &__value{
+        font-size: 50px;
+        display: inline-block;
+        margin-right:16px;
+        font-weight: 600;
+      }
+      &__tax{
+        display: inline-block;
+        font-size: 8px;
+      }
+      &__post{
+        display: inline-block;
+      }
+    }
+    // 購入ボタン構成
+     &__buy{
+        width: 620px;
+        height: 60px;
+        background-color: $loginRed;
+        margin-top: 16px;
+        &__xa{
+          font-size: 25px;
+          font-weight: 600;
+          color: white;
+          position: relative;
+          top: 15px;
+        }
+     }
+    // 商品説明文
+    &__desc{
+      margin:30px 0 0 0;
+      text-align: left;
+      font-size:  20px;
+    }
+    // 説明フッタ
+    &__footer{
+        width:  620px;
+        height: 50px;
+        margin-top: 60px;
+        &__box{
+          display: inline-block;
+          height: 35px;
+          width: 120px;
+          background-color: $backGray1;
+          float: left;
+          border-radius: 15px;
+          &__xa{
+            padding: 10px;
+          }
+        }
+        &__box2{
+          display: inline-block;
+          height: 35px;
+          width: 180px;
+          background-color: $backGray1;
+          float: left;
+          border-radius: 15px;
+          margin-left: 15px;
+          &__xa{
+            padding: 10px;
+          }
+        }
+        &__box3{
+          &__xa{
+            padding: 10px;
+            color: $linkBlue ;
+          }
+        }
+    }
+  }
+  // コメント欄
+  &__comment{
+    width: 700px;
+    background-color: white;
+    text-align: left;
+    margin: 40px auto 0 auto;
+    padding: 24px;
+      &__alert{
+        padding: 8px;
+        background-color: $backCream;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+      &__greybtn{
+        height:50px;
+        color: white;
+        margin-top:8px;
+        background-color: grey;
+        padding: 16px;
+        text-align: center;
+      }
+  }
+  // 別ページリンクフィールド
+  &__li{
+    width: 620px;
+    height: 50px;
+    margin: 20px auto 0 auto;
+    color: $linkBlue ;
+    clear: both;
+
+    &__xa-l{
+      display: inline-block;
+      float: left;
+    }
+    &__xa-r{
+      display: inline-block;
+      float: right;
+    }
+  }
+  // 別ページリンクフィールド(フェイスブックなど)
+  &__li-2{
+    width: 620px;
+    margin: 20px auto 0 auto;
+    font-size: 40px;
+    background-color: white;
+    &__box{
+      width: 160px;
+      margin: auto;
+      padding: 40px 0 0 0;
+      height: 100px;
+      &__b1{
+          display: inline-block;
+          border-radius: 15px;
+          width:44px;
+          height: 44px;
+          color:$facebookBlue
+      }
+      &__b2{
+          display: inline-block;
+          border-radius: 15px;
+          width:44px;
+          height: 44px;
+          color: $twitterBlue
+      }
+      &__b3{
+          display: inline-block;
+          border-radius: 15px;
+          width:44px;
+          height: 44px;
+          color: $pinterestRed
+      }
+    }
+  }
+
+// コンテンツ終了
+}

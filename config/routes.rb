@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-root 't#index'
-
   devise_for :users
-  get 't' => 't#index'
-  get 'usercheck' => 'test_views#usercheck'
-  get 'signup' => 'test_views#signup'
-  get 'login' => 'test_views#login'
-  get 'top' => 'test_views#top'
+  resources :credit_card, only: [:new]
+
+  resources :users do
+    get :logout, on: :member
+  end
+
+  resources :mypages, only: [:show, :edit]
 
 end
