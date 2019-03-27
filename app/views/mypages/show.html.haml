@@ -1,0 +1,73 @@
+= render "shared/headerLogin"
+= render "shared/breadCrumbs"
+.wrapper
+  .l-container
+    = render "shared/sidecontent"
+    .mypage
+      .mypage__icon
+        %figure.mypage__icon__figure
+          %img.mypage__icon__figure__img{height: "60", src: "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", width: "60"}
+          %h2.mypage__icon__figure__name 隅川裕介
+        .mypage__icon__number
+          .mypage__icon__number__evaluation 評価 0
+          .mypage__icon__number__exhibit 出品数 0
+      .mypage__container
+        %ul.mypage__container__tabs
+          %li
+            .mypage__container__tabs__notice お知らせ
+          %li
+            .mypage__container__tabs__todo やることリスト
+        .mypage__container__tabs-content
+          %ul.mypage__container__tabs-content__notification
+            %li
+              .mypage-item-link
+                %figure
+                  =image_tag("//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: "lazyloaded")
+                  .mypage-item-text 【まだ一度も売れたことがない方必見！】売れたら最大P1,800貰えるウルトラキャンペーン
+                  .notice-time
+                    %i.far.fa-clock
+                    %span 21時間前
+                %i.fas.fa-chevron-right
+            %li
+              .mypage-item-link
+                %figure
+                  =image_tag("//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: "lazyloaded")
+                  .mypage-item-text 【3日後、5%割引お得チケットの有効期限が切れます！タップして詳細を確認しましょう。
+                  .notice-time
+                    %i.far.fa-clock
+                    %span 21時間前
+                %i.fas.fa-chevron-right
+            %li
+              .mypage-item-link
+                %figure
+                  =image_tag("//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: "lazyloaded")
+                  .mypage-item-text 【事務局から個別メッセージ「【本日13時までに限定タイムセール】全品5%OFFのチャンスをお見逃しなく」
+                  .notice-time
+                    %i.far.fa-clock
+                    %span 21時間前
+                %i.fas.fa-chevron-right
+            %li
+              .mypage-item-link
+                %figure
+                  =image_tag("//static-mercari-jp-imgtr2.akamaized.net/images/mercari_profile.png", class: "lazyloaded")
+                  .mypage-item-text 【事務局から個別メッセージ「【5%OFFのお得チケット】をプレゼントしました！お得にお買い物をお楽しみください♪」
+                  .notice-time
+                    %i.far.fa-clock
+                    %span 21時間前
+                %i.fas.fa-chevron-right
+            %li.mypage-go-list
+              .mypage-go-list-link
+                = link_to "一覧を見る", "/jp/mypage/purchased/"
+      .mypage__container__history
+        %h2.mypage__container__history__head 購入した商品
+        %ul.mypage__container__history__tabs
+          %li.mypage__container__history__tabs__tab
+            .mypage__container__history__tabs__tab__trading 取引中
+          %li.mypage__container__history__tabs__tab
+            .myapge__container__history__tabs__tab__history 過去の取引
+        .mypage__container__history__content
+          %ul.mypage__container__history__content__now
+            %li.mypage__container__history__content__nofound 取引中の商品がありません
+= render "shared/app-banner"
+= render "shared/footer"
+= render "shared/camera"
