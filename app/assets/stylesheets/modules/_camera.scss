@@ -1,0 +1,19 @@
+.footer-sell-btn{
+  bottom: 32px;
+  right: 32px;
+  width: 160px;
+  height: 160px;
+  font-size: 22px;
+  position: fixed;
+  z-index: 1000;
+  border-radius: 50%;
+  background: #ea352d;
+  color: #fff;
+  text-align: center;
+  .sell-btn {
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+  }
+}

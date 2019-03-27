@@ -1,0 +1,18 @@
+= render "shared/headerLogin"
+= render "shared/breadCrumbs"
+.wrapper
+  .l-container
+    = render 'shared/sidecontent'
+    .profile
+      %h2.profile__head プロフィール
+      %form.profile__content
+        .profile__content__icon
+          %figure.profile__content__icon__fig
+            %img.profile__content__icon__fig__img{height: "60", src: "//static-mercari-jp-imgtr2.akamaized.net/images/member_photo_noimage_thumb.png", width: "60"}
+            %input.profile__content__icon__fig__input{name: "", placeholder: "例)AYA☆セール中", type: "text"}
+        .setting-profile-content
+          %textarea.textarea-default{placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"}
+          %button.btn-default.btn-red{type: "submit"} 変更する
+= render "shared/app-banner"
+= render "shared/footer"
+= render "shared/camera"
