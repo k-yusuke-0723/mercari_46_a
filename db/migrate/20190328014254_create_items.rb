@@ -13,6 +13,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer :price
       t.text :description
       t.timestamps
+      t.references :image, foreign_key: true
     end
   end
 end
