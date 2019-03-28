@@ -1,2 +1,0 @@
-class AddImageidToItem < ApplicationRecord
-end

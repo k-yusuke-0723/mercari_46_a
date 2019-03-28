@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_28_114134) do
+ActiveRecord::Schema.define(version: 2019_03_28_121418) do
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "item_id"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 2019_03_28_114134) do
     t.text "image4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "iamge5"
+    t.text "iamge6"
+    t.text "iamge7"
+    t.text "iamge8"
+    t.text "iamge9"
+    t.text "iamge10"
     t.index ["item_id"], name: "index_images_on_item_id"
   end
 
