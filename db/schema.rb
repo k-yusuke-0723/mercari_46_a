@@ -10,15 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_28_014254) do
+ActiveRecord::Schema.define(version: 2019_03_28_114134) do
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "item_id"
     t.text "image1"
     t.text "image2"
     t.text "image3"
     t.text "image4"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_images_on_item_id"
   end
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -35,10 +37,8 @@ ActiveRecord::Schema.define(version: 2019_03_28_014254) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "image_id"
     t.index ["brand"], name: "index_items_on_brand"
     t.index ["category"], name: "index_items_on_category"
-    t.index ["image_id"], name: "index_items_on_image_id"
     t.index ["name"], name: "index_items_on_name"
     t.index ["user_id"], name: "index_items_on_user_id"
   end
@@ -57,6 +57,6 @@ ActiveRecord::Schema.define(version: 2019_03_28_014254) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "items", "images"
+  add_foreign_key "images", "items"
   add_foreign_key "items", "users"
 end

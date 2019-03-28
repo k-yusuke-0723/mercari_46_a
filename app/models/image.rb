@@ -1,3 +1,3 @@
 class Image < ApplicationRecord
-    has_one :items
+  belongs_to :item
 end

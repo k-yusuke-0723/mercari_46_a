@@ -1,5 +1,4 @@
 class Item < ApplicationRecord
-  belongs_to :user
-  belongs_to :image
-
+    belongs_to :user
+    has_one :image
 end
