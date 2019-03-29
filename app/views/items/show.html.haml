@@ -3,26 +3,30 @@
   = render "shared/header"
   .product-contents
     .product-contents__flame
-      .product-contents__flame__thema リンツ リンドールチョコレート 3パック ✳送料込
+      .product-contents__flame__thema
+        = @item.name
       / 画像表示、テーブル表示フレーム開始
       .product-contents__flame__tbox
         / 画像表示セクション
         .product-contents__flame__tbox__img
-          %img.product-contents__flame__tbox__img__disp__gon{ src: "https://static.mercdn.net/item/detail/orig/photos/m58631725066_1.jpg?1551666630"}/
+          = image_tag(@item.image.image1 , class: "product-contents__flame__tbox__img__disp__gon")
           .product-contents__flame__tbox__img__slide
             .product-contents__flame__tbox__img__slide__mini
-              %img{src: "https://static.mercdn.net/item/detail/orig/photos/m58631725066_1.jpg?1551666630"}/
+              = image_tag @item.image.image1
             .product-contents__flame__tbox__img__slide__mini
-              %img{src: "https://static.mercdn.net/item/detail/orig/photos/m58631725066_2.jpg?1551666630"}/
+              = image_tag @item.image.image2
             .product-contents__flame__tbox__img__slide__mini
+              = image_tag @item.image.image3
             .product-contents__flame__tbox__img__slide__mini
+              = image_tag @item.image.image4
         / テーブル表示セクション
         .product-contents__flame__tbox__tab
           %table.product-contents__flame__tbox__tab__to{ border: "1", bordercolor: "#f5f5f5", height: "375"}
             %tr
               %th 出品者
               %td{align: "left"}
-                %span テストユーザ
+                %span
+                  = @item.user.nickname
                 .product-contents__flame__tbox__tab__to__rat
                   .product-contents__flame__tbox__tab__to__rat__icon-a
                     %i.fas.fa-laugh
@@ -36,7 +40,8 @@
             %tr
               %th カテゴリー
               %td{align: "left"}
-                %p その他
+                %p
+                  = @item.category
                 %i.fas.fa-chevron-right
                 %span 食品
                 %br/
@@ -48,30 +53,32 @@
             %tr
               %th 商品の状態
               %td{align: "left"}
-                %span 新品、未使用
-            %tr
-              %th 商品の状態
-              %td{align: "left"}
-                %span 新品、未使用
+                %span
+                  = @item.state
             %tr
               %th 配送料の負担
               %td{align: "left"}
-                %span 送料込み(出品者負担)
+                %span
+                  = @item.delivery_fee_payer
             %tr
               %th 配送の方法
               %td{align: "left"}
-                %span ゆうゆうメルカリ便
+                %span
+                  = @item.shipping_method
             %tr
               %th 配送元地域
               %td{align: "left"}
-                %span 北海道
+                %span
+                  = @item.shipping_source_area
             %tr
               %th 発送日の目安
               %td{align: "left"}
-                %span 2~3日で発送
+                %span
+                  = @item.estimated_shipping_date
       / 画像、テーブル表記タグ終了
       .product-contents__flame__valbox
-        .product-contents__flame__valbox__value ¥1,700
+        .product-contents__flame__valbox__value
+          = converting_to_jpy(@item.price)
         .product-contents__flame__valbox__tax (税込)
         .product-contents__flame__valbox__post 送料込み
       / 購入ボタン
@@ -80,17 +87,7 @@
       / 商品説明文
       .product-contents__flame__desc
         %span
-          リンドールチョコレート3パック(1袋60ｇ入り・5粒)
-          %br/
-          お好きなのを3パック選んでください。
-          %br/
-          ※リンドール抹茶・キャラメルsold out
-          %br/
-          \#ストロベリー
-          %br/
-          \#ココナッツ
-          %br/
-          \#ミルク＆ホワイト
+          = simple_format(@item.description)
       / 商品説明文
       .product-contents__flame__footer
         .product-contents__flame__footer__box
