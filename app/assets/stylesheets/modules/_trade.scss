@@ -1,0 +1,186 @@
+.wrapper{
+  background-color: $backGray1;
+}
+
+.trade{
+  &-main{
+    height: 968.22px;
+    &__container{
+      width: 700px;
+      height: 968.22px;
+      background-color: white;
+      margin: 0 auto;
+      &__head{
+        width: 700px;
+        height: 97px;
+        border-bottom: solid 2px;
+        border-color: $backGray1;
+        &__text{
+          text-align: center;
+          font-size: 22px;
+          font-weight: bold;
+          padding-top: 32px;
+        }
+      }
+      &__item{
+        width: 700px;
+        height: 474px;
+        &__inner{
+          width: 320px;
+          height: 449px;
+          margin: 0 auto;
+          text-align: center;
+          &__image{
+            width: 320px;
+            height: 148px;
+          }
+          &__name{
+            width: 320px;
+            height: 24px;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          &__buy-form{
+            width: 320px;
+            height: 261px;
+            &__price{
+              width: 320px;
+              height: 42px;
+              margin: 8px auto 0;
+            }
+            &__point{
+              width: 320px;
+              height: 48px;
+              background-color: btnGray2;
+              margin: 10px auto 0;
+              &__msg{
+                padding: 16px;
+                font-size: 14px;
+              }
+            }
+            &__payment{
+              width: 320px;
+              height: 60px;
+              padding: 16px 0;
+              font-weight: bold;
+            }
+            &__error-text{
+              width: 320px;
+              height: 21px;
+              font-size: 14px;
+              color: red;
+              margin: 8px auto 0;
+              text-align: center;
+            }
+            &__btn{
+              width: 320px;
+              height: 50px;
+              margin: 16px auto 0;
+              background-color: gray;
+              &__msg{
+                padding-top: 15px;
+                color: white;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      &__user-info{
+        width: 700px;
+        height: 146.61px;
+        margin: 40px 0 0;
+        padding: 24px 12.5% 0;
+        border-top: 1px solid $backGray1;
+        &__inner{
+          max-width: 320px;
+          margin: 0 auto;
+          &__msg{
+            font-size: 14px;
+            font-weight: bold;
+          }
+          &__text{
+            margin: 8px 0 0;
+            font-size: 14px;
+            &__fix{
+              text-align: right;
+            }
+          }
+        }
+      }
+      &__pay-method{
+        width: 700px;
+        height: 170.61px;
+        margin: 40px 0 0;
+        padding: 40px 12.5%;
+        border-top: 1px solid $backGray1;
+        &__inner{
+          width: 320px;
+          height: 89.61px;
+          margin: 0 auto;
+          &__msg{
+            font-size: 14px;
+            font-weight: bold;
+          }
+          &__text{
+          margin: 8px 0 0;
+          font-size: 14px;
+            &__fix{
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-img{
+  width: auto;
+  max-height: 148px;
+  padding-top: 25px;
+  margin: 0 auto;
+}
+
+.buy-price{
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 auto;
+  display: inline;
+  padding-right: 10px;
+}
+
+.shipping-fee-msg{
+  font-size: 12px;
+  margin: 0 auto;
+  display: inline;
+  padding-right: 10px;
+}
+
+.payment-msg{
+  font-size: 24px;
+  margin: 0 auto;
+  display: inline;
+  padding-right: 10px;
+  float: left;
+}
+
+.payment-price{
+  font-size: 20px;
+  margin: 8px auto 0;
+  display: inline;
+  float: right;
+}
+
+.footer-text{
+  margin: 0 0 0 16px;
+  font-size: 12px;
+  display: inline;
+  color: #333;
+}
+
+.footer-img{
+  width: 80px;
+  height: 65px;
+  margin: 40px auto 0;
+}
