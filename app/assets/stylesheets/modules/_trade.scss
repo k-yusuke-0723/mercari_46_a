@@ -51,7 +51,7 @@
             &__point{
               width: 320px;
               height: 48px;
-              background-color: btnGray2;
+              background-color: $btnGray2;
               margin: 10px auto 0;
               &__msg{
                 padding: 16px;
@@ -63,6 +63,19 @@
               height: 60px;
               padding: 16px 0;
               font-weight: bold;
+              &--msg{
+                font-size: 28px;
+                margin: 0 auto;
+                display: inline;
+                padding-right: 10px;
+                float: left;
+              }
+              &--price{
+                font-size: 22px;
+                margin: 8px auto 0;
+                display: inline;
+                float: right;
+              }
             }
             &__error-text{
               width: 320px;
@@ -155,32 +168,4 @@
   margin: 0 auto;
   display: inline;
   padding-right: 10px;
-}
-
-.payment-msg{
-  font-size: 24px;
-  margin: 0 auto;
-  display: inline;
-  padding-right: 10px;
-  float: left;
-}
-
-.payment-price{
-  font-size: 20px;
-  margin: 8px auto 0;
-  display: inline;
-  float: right;
-}
-
-.footer-text{
-  margin: 0 0 0 16px;
-  font-size: 12px;
-  display: inline;
-  color: #333;
-}
-
-.footer-img{
-  width: 80px;
-  height: 65px;
-  margin: 40px auto 0;
 }
