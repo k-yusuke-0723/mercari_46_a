@@ -26,3 +26,11 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 public/uploads/*
+
+app/assets/stylesheets/modules/_breadcrumb.scss
+
+app/assets/stylesheets/application.scss
+
+app/assets/stylesheets/modules/_creditcards.scss
+
+app/controllers/application_controller.rb
