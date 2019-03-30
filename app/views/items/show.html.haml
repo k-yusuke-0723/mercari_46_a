@@ -102,7 +102,13 @@
           .product-contents__flame__footer__box3__xa
             %i.fas.fa-unlock-alt
             あんしん・あんぜんへの取り組み
-    / 商品へのコメント欄
+    / 商品削除ボタン制御
+    - if user_signed_in? && current_user.id == @item.user_id
+      .product-contents__comment
+        .product-contents__comment__greybtn 出品を一旦停止する
+        .product-contents__comment__greybtn
+          = link_to 'この商品を削除する', item_path(@item.id), method: :delete
+    / 商品コメント欄
     .product-contents__comment
       .product-contents__comment__alert 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
       %textarea{cols: "90", name: "", rows: "4"}
