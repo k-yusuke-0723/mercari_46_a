@@ -177,8 +177,14 @@ describe User do
       user.valid?
     end
 
-    it "postcodeは123-1234の形であれば登録できる" do
+    it "postcodeは123-1234の形でないと登録できない" do
       user = build(:user, postcode: "123-12345")
+      user.valid?
+      expect(user.errors[:postcode]).to include("123-1234の形で入力してください")
+    end
+
+    it "postcodeは123-1234の形であれば登録できる" do
+      user = build(:user, postcode: "123-1234")
       user.valid?
     end
 
