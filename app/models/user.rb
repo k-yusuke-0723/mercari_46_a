@@ -34,5 +34,6 @@ class User < ApplicationRecord
 # 郵便番号は〒123-1234の形
   VALID_POSTCODE_REGEX = /\A[0-9]{3}-[0-9]{4}\z/
   validates :postcode, presence: true, format: { with: VALID_POSTCODE_REGEX, message: '123-1234の形で入力してください'}
+  has_many :items
 
 end
