@@ -4,7 +4,7 @@
   .l-contener-logout
     .l-contener-logout__box
       .l-contener-logout__box__btn
-        =link_to(destroy_user_session_path, method: :delete, :style=>"color:white") do
-          ログアウト
+        =link_to(sign_out_path, method: :delete) do
+            ログアウト
     = render "shared/sidecontent"
 = render "shared/footer"
