@@ -6,4 +6,14 @@ describe ItemsController do
       get :show, params: {  id: 1 }
     end
   end
+
+  describe 'delete #destroy' do
+    it "deletes the item" do
+      item = FactoryBot.create(:item)
+      expect{
+        item.destroy
+      }.to change(Item,:count).by(-1)
+    end
+  end
+
 end
