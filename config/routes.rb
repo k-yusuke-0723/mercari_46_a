@@ -11,5 +11,6 @@ Rails.application.routes.draw do
 
   resources :mypages, only: [:show, :edit]
 
+  resources :trades, only: [:new]
 
 end
