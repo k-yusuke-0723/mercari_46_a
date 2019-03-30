@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+<<<<<<< HEAD
   validates :nickname, presence: true, length: { maximum: 6 }
   validates :last_name, presence: true
   validates :first_name, presence: true
@@ -34,6 +35,7 @@ class User < ApplicationRecord
 # 郵便番号は〒123-1234の形
   VALID_POSTCODE_REGEX = /\A[0-9]{3}-[0-9]{4}\z/
   validates :postcode, presence: true, format: { with: VALID_POSTCODE_REGEX, message: '123-1234の形で入力してください'}
-  has_many :items
 
-end
+  has_many :items
+  validates :nickname, presence: true
+
