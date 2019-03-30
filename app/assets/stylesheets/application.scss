@@ -3,21 +3,21 @@
 @import "./base";
 @import "font-awesome";
 @import "modules/header";
-@import "modules/sidecontents";
+@import "modules/sidecontent";
 @import "modules/app-banner";
 @import "modules/footer";
-@import "modules/creditcard";
-@import "modules/headerlogin";
-@import "modules/breadcrumbs";
+@import "modules/creditcards";
+@import "modules/headerslogin";
+@import "modules/breadcrumb";
 @import "modules/sell";
 
 // カメラボタン
 @import "modules/camera";
 
 // ユーザログオン関連ページ－scss
-@import "modules/userfootter";
-@import "modules/userheader";
-@import "modules/userlogin";
+@import "modules/userfooter";
+@import "modules/userheaders";
+@import "modules/userloginn";
 @import "modules/signup";
 @import "modules/logout";
 
