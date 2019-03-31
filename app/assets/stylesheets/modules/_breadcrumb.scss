@@ -1,29 +1,16 @@
 .bread-crumbs {
-  position: relative;
+  height: 52px;
   border-top: 1px solid #eee;
-  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+  border-bottom: 3px solid rgba(0,0,0,0.16);
+  padding: 0 210px;
+  line-height: 49px;
+  font-size: 14px;
   background: #fff;
-  ul {
-    width: 1020px;
-    overflow: visible;
-    margin: 0 auto;
-    padding: 17px 0 16px;
-    white-space: normal;
-    font-size: 0;
-  }
-  li {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    display: inline-block;
-    font-size: 14px;
-    line-height: 1.2;
-  }
-  a {
+    & a {
     color: #333;
-  }
-  .fa-chevron-right {
-    margin: 0 8px;
-    font-size: 9px;
-    color: #888;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
