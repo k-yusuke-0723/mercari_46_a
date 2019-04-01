@@ -6,13 +6,19 @@ Rails.application.routes.draw do
 
   resources :credit_card, only: [:new]
   resources :sells, only: [:new]
-  resources :items
+
   resources :users do
     get :logout, on: :member
   end
 
   resources :mypages, only: [:show, :edit]
 
-  resources :trades, only: [:new]
+  resources :items  do
+    resources :trades do
+        collection do
+          post 'purchase'
+        end
+    end
+  end
 
 end
