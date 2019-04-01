@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     if @item.save
-      redirect_to "/mypages/#{current_user.id}"
+      redirect_to mypage_path(current_user.id)
     else
       render "items/new"
     end
