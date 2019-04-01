@@ -1,9 +1,12 @@
 = render "shared/headerLogin"
 .wrapper
-  = render "shared/breadCrumbs"
+  .bread-crumbs
+    - breadcrumb :logout
+    = breadcrumbs separator: " &gt; "
   .l-contener-logout
     .l-contener-logout__box
       .l-contener-logout__box__btn
-        ログアウト
+        =link_to(destroy_user_session_path, method: :delete, :style=>"color:white") do
+          ログアウト
     = render "shared/sidecontent"
 = render "shared/footer"

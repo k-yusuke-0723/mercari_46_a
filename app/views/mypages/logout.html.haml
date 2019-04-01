@@ -1,0 +1,10 @@
+= render "shared/headerLogin"
+.wrapper
+  = render "shared/breadCrumbs"
+  .l-contener-logout
+    .l-contener-logout__box
+      .l-contener-logout__box__btn
+        =link_to(sign_out_path, method: :delete) do
+            ログアウト
+    = render "shared/sidecontent"
+= render "shared/footer"

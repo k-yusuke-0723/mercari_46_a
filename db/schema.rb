@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_062658) do
+ActiveRecord::Schema.define(version: 2019_03_28_121418) do
+
+  create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "item_id"
+    t.text "image1"
+    t.text "image2"
+    t.text "image3"
+    t.text "image4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "iamge5"
+    t.text "iamge6"
+    t.text "iamge7"
+    t.text "iamge8"
+    t.text "iamge9"
+    t.text "iamge10"
+    t.index ["item_id"], name: "index_images_on_item_id"
+  end
 
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -41,10 +58,28 @@ ActiveRecord::Schema.define(version: 2019_03_27_062658) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "last_name"
+    t.string "first_name"
+    t.string "last_name_kana"
+    t.string "first_name_kana"
+    t.integer "birthday_year"
+    t.integer "birthday_month"
+    t.integer "birthday_day"
+    t.string "postcode"
+    t.string "prefecture"
+    t.string "city"
+    t.integer "block"
+    t.integer "building"
+    t.string "phone_number", null: false
+    t.integer "point"
+    t.date "point_exp_date"
+    t.text "biography"
+    t.string "user_image"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["nickname"], name: "index_users_on_nickname"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "images", "items"
   add_foreign_key "items", "users"
 end
