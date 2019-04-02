@@ -1,5 +1,5 @@
 .wrapper
-  = render "shared/userheader"
+  = render "shared/userHeader"
   .trade-main
     .trade-main__container
       .trade-main__container__head
@@ -7,7 +7,7 @@
       .trade-main__container__item
         .trade-main__container__item__inner
           .trade-main__container__item__inner__image
-            = image_tag @item.image.image1, alt: "mercari",class: "product-img"
+            = image_tag @item.image.image1.url, alt: "mercari",class: "product-img"
           .trade-main__container__item__inner__name
             = @item.name
           .trade-main__container__item__inner__buy-form
@@ -45,4 +45,4 @@
           .trade-main__container__pay-method__inner__text
             =link_to do
               .trade-main__container__pay-method__inner__text__fix 変更する >
-  = render "shared/userfootter"
+  = render "shared/userFootter"
