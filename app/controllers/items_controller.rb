@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
 
   def index
+    @items = Item.order('id DESC').limit(4)
+    @images = Image.order('id DESC').limit(4)
   end
 
   def show
