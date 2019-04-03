@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
 
   def index
+    @user = current_user
+    redirect_to edit_user_registration_path unless @user.valid?
     @items = Item.order('id DESC').limit(4)
     @images = Image.order('id DESC').limit(4)
   end
