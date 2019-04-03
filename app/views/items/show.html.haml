@@ -9,16 +9,10 @@
       .product-contents__flame__tbox
         / 画像表示セクション
         .product-contents__flame__tbox__img
-          = image_tag(@item.image.image1 , class: "product-contents__flame__tbox__img__disp__gon")
+          = image_tag(@item.image.image1.url , class: "product-contents__flame__tbox__img__disp__gon")
           .product-contents__flame__tbox__img__slide
             .product-contents__flame__tbox__img__slide__mini
-              = image_tag @item.image.image1
-            .product-contents__flame__tbox__img__slide__mini
-              = image_tag @item.image.image2
-            .product-contents__flame__tbox__img__slide__mini
-              = image_tag @item.image.image3
-            .product-contents__flame__tbox__img__slide__mini
-              = image_tag @item.image.image4
+              = image_tag @item.image.image1.url
         / テーブル表示セクション
         .product-contents__flame__tbox__tab
           %table.product-contents__flame__tbox__tab__to{ border: "1", bordercolor: "#f5f5f5", height: "375"}
@@ -82,8 +76,11 @@
         .product-contents__flame__valbox__tax (税込)
         .product-contents__flame__valbox__post 送料込み
       / 購入ボタン
-      .product-contents__flame__buy
-        .product-contents__flame__buy__xa 購入画面に進む
+      - if @item.trade.trade_status == 0
+        = link_to "購入画面に進む", new_item_trade_path(@item.id), class: "product-contents__flame__buy product-contents__flame__buy__xa"
+      - else @item.trade.trade_status == 1
+        .product-contents__flame__sell
+          .product-contents__flame__sell__xa 売り切れました
       / 商品説明文
       .product-contents__flame__desc
         %span
