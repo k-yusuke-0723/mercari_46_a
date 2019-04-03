@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable, :omniauthable
   validates :nickname, presence: true, length: { maximum: 6 }
   validates :last_name, presence: true
   validates :first_name, presence: true
@@ -34,6 +34,21 @@ class User < ApplicationRecord
 # 郵便番号は〒123-1234の形
   VALID_POSTCODE_REGEX = /\A[0-9]{3}-[0-9]{4}\z/
   validates :postcode, presence: true, format: { with: VALID_POSTCODE_REGEX, message: '123-1234の形で入力してください'}
+
+  def self.find_for_oauth(auth)
+    user = User.where(uid: auth.uid, provider: auth.provider).first
+    unless user
+      user = User.new(
+        nickname: auth.info.name,
+        uid: auth.uid,
+        provider: auth.provider,
+        email: auth.info.email,
+        password: Devise.friendly_token[0, 20]
+      )
+      user.save(validate: false)
+    end
+    user
+  end
 
   has_many :items
 end
