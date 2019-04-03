@@ -36,4 +36,5 @@ class User < ApplicationRecord
   validates :postcode, presence: true, format: { with: VALID_POSTCODE_REGEX, message: '123-1234の形で入力してください'}
 
   has_many :items
+  has_many :trades
 end
