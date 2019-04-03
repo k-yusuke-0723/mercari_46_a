@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_01_075811) do
+ActiveRecord::Schema.define(version: 2019_04_02_125731) do
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "item_id"
@@ -81,11 +81,13 @@ ActiveRecord::Schema.define(version: 2019_04_01_075811) do
     t.string "city"
     t.integer "block"
     t.integer "building"
-    t.string "phone_number", null: false
+    t.string "phone_number"
     t.integer "point"
     t.date "point_exp_date"
     t.text "biography"
     t.string "user_image"
+    t.string "uid"
+    t.string "provider"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["nickname"], name: "index_users_on_nickname"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

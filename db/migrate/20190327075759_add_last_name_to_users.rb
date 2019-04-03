@@ -12,7 +12,7 @@ class AddLastNameToUsers < ActiveRecord::Migration[5.2]
     add_column :users, :city, :string
     add_column :users, :block, :integer
     add_column :users, :building, :integer
-    add_column :users, :phone_number, :string, null:false, unique: true
+    add_column :users, :phone_number, :string, unique: true
     add_column :users, :point, :integer
     add_column :users, :point_exp_date, :date
     add_column :users, :biography, :text

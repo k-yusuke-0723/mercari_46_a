@@ -9,6 +9,7 @@ class User < ApplicationRecord
   validates :prefecture, presence: true
   validates :city, presence: true
   validates :block, presence: true
+  validates :phone_number, presence: true
 
   # かなのみの入力
   VALID_KANA_REGEX = /\A[ぁ-ん]+\z/
