@@ -14,6 +14,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    @item.build_trade(trade_status: EXHIBITION)
     if @item.save
       redirect_to mypage_path(current_user.id)
     else
