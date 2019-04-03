@@ -3,10 +3,6 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  EXHIBITION      = 0
-  EXHIBITION_STOP = 1
-  SOLD_OUT        = 2
-
   protected
 
   def configure_permitted_parameters
