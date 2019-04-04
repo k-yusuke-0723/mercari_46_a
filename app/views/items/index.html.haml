@@ -9,7 +9,7 @@
         .pickup-cont__item__flame__box
           = link_to item_path(item.id) do
             .pickup-cont__item__flame__box__size
-              = image_tag @images.find(item.id).image1.url, alt: item.name, class: "pickup-cont__item__flame__box__size"
+              = image_tag item.image.image1.url, alt: item.name, class: "pickup-cont__item__flame__box__size"
             .pickup-cont__item__flame__box__body
               .pickup-cont__item__flame__box__body__name
                 = item.name
@@ -25,7 +25,7 @@
         .pickup-cont__item__flame__box
           = link_to item_path(item.id) do
             .pickup-cont__item__flame__box__size
-              = image_tag @images.find(item.id).image1.url, alt: item.name, class: "pickup-cont__item__flame__box__size"
+              = image_tag item.image.image1.url, alt: item.name, class: "pickup-cont__item__flame__box__size"
             .pickup-cont__item__flame__box__body
               .pickup-cont__item__flame__box__body__name
                 = item.name
@@ -42,7 +42,7 @@
         .pickup-cont__item__flame__box
           = link_to item_path(item.id) do
             .pickup-cont__item__flame__box__size
-              = image_tag @images.find(item.id).image1.url, alt: item.name, class: "pickup-cont__item__flame__box__size"
+              = image_tag item.image.image1.url, alt: item.name, class: "pickup-cont__item__flame__box__size"
             .pickup-cont__item__flame__box__body
               .pickup-cont__item__flame__box__body__name
                 = item.name
@@ -58,7 +58,7 @@
         .pickup-cont__item__flame__box
           = link_to item_path(item.id) do
             .pickup-cont__item__flame__box__size
-              = image_tag @images.find(item.id).image1.url, alt: item.name, class: "pickup-cont__item__flame__box__size"
+              = image_tag item.image.image1.url, alt: item.name, class: "pickup-cont__item__flame__box__size"
             .pickup-cont__item__flame__box__body
               .pickup-cont__item__flame__box__body__name
                 = item.name

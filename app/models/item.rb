@@ -3,7 +3,7 @@ class Item < ApplicationRecord
   belongs_to :user
   has_one :image, dependent: :destroy
   belongs_to_active_hash :prefecture
-  accepts_nested_attributes_for :image
+  accepts_nested_attributes_for :image, allow_destroy: true
   validates :name,                    presence: true, length: { maximum: 40 }
   validates :description,             presence: true, length: { maximum: 1000 }
   validates :state,                   presence: true

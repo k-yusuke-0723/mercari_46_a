@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :editor_check, only: :edit
 
   def index
     @items = Item.order('id DESC').limit(4)
@@ -30,6 +31,16 @@ class ItemsController < ApplicationController
     end
   end
 
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    item = Item.find(params[:id])
+    item.update(item_params)
+    redirect_to item_path(item.id)
+  end
+
   private
 
   def item_params
@@ -43,6 +54,11 @@ class ItemsController < ApplicationController
       :estimated_shipping_date,
       :price,
       image_attributes: [:image1]).merge(user_id: current_user.id)
+  end
+
+  def editor_check
+    @item = Item.find(params[:id])
+    return redirect_to :root  unless (@item.user_id == current_user.id)
   end
 
 end
