@@ -1,7 +1,8 @@
 = render "shared/headerLogin"
-.bread-crumbs
-  - breadcrumb :mypage
-  = breadcrumbs separator: " &gt; "
+.bread-area
+  .bread-crumbs
+    - breadcrumb :mypage
+    = breadcrumbs separator: " &gt; "
 .wrapper
   .l-container
     = render "shared/sidecontent"
