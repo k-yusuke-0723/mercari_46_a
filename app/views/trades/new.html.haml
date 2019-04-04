@@ -7,7 +7,7 @@
       .trade-main__container__item
         .trade-main__container__item__inner
           .trade-main__container__item__inner__image
-            = image_tag @item.image.image1, alt: "mercari",class: "product-img"
+            = image_tag @item.image.image1.url, alt: "mercari",class: "product-img"
           .trade-main__container__item__inner__name
             = @item.name
           .trade-main__container__item__inner__buy-form
@@ -24,9 +24,13 @@
                 %li.trade-main__container__item__inner__buy-form__payment--price
                   = converting_to_jpy(@item.price)
             .trade-main__container__item__inner__buy-form__error-text 配送先と支払い方法の入力を完了してください。
-            = form_tag(action: :purchase, method: :post) do
-              %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", src: "https://checkout.pay.jp", type: "text/javascript"}
-              %input{name: "pay_val", type: "hidden", value: @item.price }/
+            / = form_tag(action: :purchase, method: :post) do
+            /   %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", src: "https://checkout.pay.jp", type: "text/javascript"}
+            /   %input{name: "pay_val", type: "hidden", value: @item.price }/
+            .trade-main__container__item__inner__buy-form__btn
+              = form_tag(productbuy_item_trades_path, method: :post) do
+                .trade-main__container__item__inner__buy-form__btn__msg
+                  %input.trade-main__container__item__inner__buy-form__btn__msg_inp{:type => "submit", :value => "購入する" }/
       .trade-main__container__user-info
         .trade-main__container__user-info__inner
           .trade-main__container__user-info__inner__msg 配送先

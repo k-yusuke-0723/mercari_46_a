@@ -10,4 +10,12 @@ class TradesController < ApplicationController
     redirect_to root_path, notice: "支払いが完了しました"
   end
 
+  def productbuy
+    binding.pry
+    @trade=Trade.find(params.require(:item_id))
+    @trade.trade_status = 2
+    @trade.save
+    redirect_to root_path, notice: "購入が完了しました"
+  end
+
 end
