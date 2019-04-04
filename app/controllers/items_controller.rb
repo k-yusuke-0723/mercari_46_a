@@ -28,8 +28,13 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    item=Item.where(id:(params.require(:id)))
+    trade=Trade.where(item_id:(params.require(:id)))
+    image=Image.where(item_id:(params.require(:id)))
     if @item.user_id == current_user.id
-      @item.destroy
+      trade[0].delete
+      image[0].delete
+      item[0].delete
     end
   end
 
