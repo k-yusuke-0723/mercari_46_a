@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :editor_check, only: :edit
+  before_action :set_item, only: [:show, :destroy, :edit, :update]
 
   def index
     @user = current_user
@@ -8,7 +10,6 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
   end
 
   def new
@@ -27,13 +28,24 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    item = Item.find(params[:id])
     if item.user_id == current_user.id
       item.destroy
     end
   end
 
+  def edit
+  end
+
+  def update
+    item.update(item_params)
+    redirect_to item_path(item.id)
+  end
+
   private
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
 
   def item_params
     params.require(:item).permit(
@@ -46,6 +58,11 @@ class ItemsController < ApplicationController
       :estimated_shipping_date,
       :price,
       image_attributes: [:image1]).merge(user_id: current_user.id)
+  end
+
+  def editor_check
+    @item = Item.find(params[:id])
+    return redirect_to :root  unless (@item.user_id == current_user.id)
   end
 
 end
