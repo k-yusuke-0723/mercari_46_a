@@ -94,19 +94,50 @@ pre {
   &-upload-head {
     font-size: 16px;
   }
-  &-dropbox-container.state-image-number-10 {
+  &-dropbox-container {
     display: block;
     width: 620px;
     margin: 16px auto 0;
     height: 162px;
-    .sell-upload-items-container {
-      display: inline;
-      .sell-upload-items {
-        display: inline;
+    &__item {
+      width: 116px;
+      height: 162px;
+      display: inline-block;
+      &--edit{
+        width: 56px;
+        height: 44px;
+        line-height: 44px;
         float: left;
-        ul {
-          display: inline;
+        background-color: white;
+        p {
+          font-size: 16px;
+          text-align: center;
         }
+      }
+      &--delete{
+        width: 56px;
+        height: 44px;
+        line-height: 44px;
+        p {
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+    }
+    &__msg-box {
+      width: 491px;
+      height: 162px;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      margin: 0 auto;
+      padding: 40px;
+      float: right;
+      background-color: #eee;
+      &__inner{
+        width: 250px;
+        height: 42px;
+        margin: 10px auto;
       }
     }
     .sell-upload-drop-box {

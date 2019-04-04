@@ -1,0 +1,36 @@
+%title ログイン - メルカリ スマホでかんたん フリマアプリ
+.contents
+  = render "shared/userHeader"
+  .ident-main
+    .ident-main__login-noacc
+      .ident-main__login-noacc__text-alert アカウントをお持ちでない方はこちら
+      .ident-main__login-noacc__new-btn
+        = link_to 'メールアドレスで登録', new_user_registration_path, :style=>"color:white"
+    .signup-main__login-border
+    .ident-main__login-form
+      .ident-main__login-form__fb-btn{ class: ".btn-default"}
+        = link_to 'facebookで登録', user_facebook_omniauth_authorize_path, :style=>"color:white"
+      .ident-main__login-form__ggl-btn{ class: ".btn-default"}
+        = link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, :style=>"color:black"
+    .ident-main__login-form
+      %input.ident-main__login-form__form-group__inform{placeholder: "メールアドレス"}/
+      .ident-main__login-form__form-group
+        %input.ident-main__login-form__form-group__inform{placeholder: "パスワード"}/
+      .ident-main__login-form__form-group
+        .ident-main__login-form__form-group__rc-anc
+          .ident-main__login-form__form-group__rc-anc__cbox
+          .ident-main__login-form__form-group__rc-anc__ctext
+            私はロボットではあり
+            %br>/
+            ません
+          .ident-main__login-form__form-group__rc-anc__footter
+            .ident-main__login-form__form-group__rc-anc__footter__logo-img
+            .ident-main__login-form__form-group__rc-anc__footter__logo-text reCAPTCHA
+            .ident-main__login-form__form-group__rc-anc__footter__logo-text2
+              .ident-main__login-form__form-group__rc-anc__footter__logo-text2__b1 プライバシ
+              .ident-main__login-form__form-group__rc-anc__footter__logo-text2__b2 -
+              .ident-main__login-form__form-group__rc-anc__footter__logo-text2__b3 利用規約
+        .ident-main__login-form__form-group
+          .ident-main__login-form__form-group__login-btn ログイン
+          .ident-main__login-form__form-group__pass-forget パスワードをお忘れの方
+    = render "shared/userFootter"
