@@ -11,10 +11,9 @@ class TradesController < ApplicationController
   end
 
   def productbuy
-    binding.pry
-    @trade=Trade.find(params.require(:item_id))
-    @trade.trade_status = 2
-    @trade.save
+    @trade=Trade.where(item_id:(params.require(:item_id)))
+    @trade[0].trade_status = 2
+    @trade[0].save
     redirect_to root_path, notice: "購入が完了しました"
   end
 
