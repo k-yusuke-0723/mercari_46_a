@@ -56,10 +56,6 @@
               &__msg{
                 padding: 16px;
                 font-size: 14px;
-                &__inp{
-                  border: none;
-                  background-color: $btnGray2;
-                }
               }
             }
             &__payment{
@@ -98,6 +94,10 @@
                 padding-top: 15px;
                 color: white;
                 text-align: center;
+                &__inp{
+                  border: none;
+                  background-color: gray;
+                }
               }
             }
           }
