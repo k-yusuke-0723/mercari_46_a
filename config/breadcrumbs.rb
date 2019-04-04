@@ -16,3 +16,8 @@ crumb :credit_card do
   link "クレジットカード情報入力"
   parent :mypage
 end
+
+crumb :profile do
+  link "プロフィール"
+  parent :mypage
+end

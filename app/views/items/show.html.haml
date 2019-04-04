@@ -109,7 +109,7 @@
       .product-contents__comment
         .product-contents__comment__greybtn 出品を一旦停止する
         .product-contents__comment__greybtn
-          = link_to 'この商品を削除する', item_path(@item.id), method: :delete
+          = link_to 'この商品を削除する', item_path(@item.id), :style=>"color:white", method: :delete
     / 商品コメント欄
     .product-contents__comment
       .product-contents__comment__alert 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
