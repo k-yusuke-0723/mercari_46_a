@@ -9,7 +9,7 @@
       .product-contents__flame__tbox
         / 画像表示セクション
         .product-contents__flame__tbox__img
-          = image_tag(@item.image.image1.url , class: "product-contents__flame__tbox__img__disp__gon")
+          = image_tag(@item.image.image1.url, class: "product-contents__flame__tbox__img__disp__gon")
           .product-contents__flame__tbox__img__slide
             .product-contents__flame__tbox__img__slide__mini
               = image_tag @item.image.image1.url
@@ -77,11 +77,15 @@
         .product-contents__flame__valbox__tax (税込)
         .product-contents__flame__valbox__post 送料込み
       / 購入ボタン
-      - if @item.trade.exhibition?
-        = link_to "購入画面に進む", new_item_trade_path(@item.id), class: "product-contents__flame__buy product-contents__flame__buy__xa"
-      - else @item.trade.sold_out?
-        .product-contents__flame__sell
-          .product-contents__flame__sell__xa 売り切れました
+      .product-contents__flame__buy
+        - if user_signed_in? && current_user.id == @item.user_id
+          = link_to "編集画面に進む", edit_item_path(@item.id), method: :get, class: "product-contents__flame__buy__edit"
+        - else
+          - if @item.trade.exhibition?
+            = link_to "購入画面に進む", new_item_trade_path(@item.id), class: "product-contents__flame__buy product-contents__flame__buy__xa"
+          - else @item.trade.sold_out?
+            .product-contents__flame__sell
+              .product-contents__flame__sell__xa 売り切れました
       / 商品説明文
       .product-contents__flame__desc
         %span
