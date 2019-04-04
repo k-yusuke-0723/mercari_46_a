@@ -1,5 +1,5 @@
 .contents
-  = render "shared/userheader"
+  = render "shared/userHeader"
   .signup-main
     .signup-main__login-form
       .signup-main__login-form__text-center 新規会員登録
@@ -8,13 +8,14 @@
       .signup-main__login-form2__ml-btn
         .signup-main__login-form2__ml-btn__icon
           %i.far.fa-envelope
-        メールアドレスで登録
+        = link_to 'メールアドレスで登録', new_user_registration_path, :style=>"color:black"
       .signup-main__login-form2__fb-btn
         .ident-main__login-form__fb-btn__icon
           %i.fab.fa-facebook
-        Facebookで登録
+        = link_to 'facebookで登録', user_facebook_omniauth_authorize_path, :style=>"color:white"
       .signup-main__login-form2__ggl-btn
         .ident-main__login-form__ggl-btn__icon
           %img{alt: "google", height: "20", src: "http://ivystar.jp/uploads/2015/09/150907-google-icon.png", width: "30"}/
-        Googleで登録
-= render "shared/userfootter"
+        = link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, :style=>"color:black"
+= render "shared/userFootter"
+

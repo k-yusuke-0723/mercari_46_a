@@ -147,6 +147,16 @@
         height: 60px;
         background-color: $loginRed;
         margin-top: 16px;
+        &__edit{
+          width: 620px;
+          height: 60px;
+          font-size: 25px;
+          font-weight: 600;
+          color: white;
+          position: relative;
+          line-height: 60px;
+          display: inline-block;
+        }
         &__xa{
           font-size: 25px;
           font-weight: 600;
