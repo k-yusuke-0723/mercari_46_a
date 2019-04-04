@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     resources :trades do
         collection do
           post 'purchase'
+          post 'productbuy'
         end
     end
   end
