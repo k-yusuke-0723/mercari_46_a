@@ -81,7 +81,11 @@
         - if user_signed_in? && current_user.id == @item.user_id
           = link_to "編集画面に進む", edit_item_path(@item.id), method: :get, class: "product-contents__flame__buy__edit"
         - else
-          .product-contents__flame__buy__xa 購入画面に進む
+          - if @item.trade.exhibition?
+            = link_to "購入画面に進む", new_item_trade_path(@item.id), class: "product-contents__flame__buy product-contents__flame__buy__xa"
+          - else @item.trade.sold_out?
+            .product-contents__flame__sell
+              .product-contents__flame__sell__xa 売り切れました
       / 商品説明文
       .product-contents__flame__desc
         %span
