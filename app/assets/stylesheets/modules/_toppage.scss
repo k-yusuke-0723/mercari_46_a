@@ -2,6 +2,9 @@
   width:  100%;
   height: 390px;
   background-image: url(https://www.mercari.com/jp/assets/img/common/jp/top/banner-bokurano-heisei.jpg);
+  background-position-x:center;
+  background-repeat: repeat-x;
+
 }
 
 .pickup-cont{
@@ -59,7 +62,7 @@
         }
 
         &__body{
-          padding: 16px;
+          padding: 16px 16px 14px 16px;
           margin: 0;
           color: $fontDarkBlack;
 
@@ -91,6 +94,32 @@
 
 // アイテム表示フレーム終了
   }
+}
+
+
+.sout{
+  width: 70px;
+  height: 70px;
+  transform:skew(0deg, -40deg);
+  background: #ea352d ;
+  z-index: 0;
+  margin-top: -183px;
+
+  overflow: hidden;
+
+}
+
+.tx{
+  text-align: center;
+  color: white;
+  font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  transform: rotate(-40deg);
+  font-size:26px;
+  z-index: 10;
+  position: relative;
+  right: 75px;
+  bottom: 50px;
+  font-weight: 600;
 }
 
 

@@ -10,9 +10,12 @@
           = link_to item_path(item.id) do
             .pickup-cont__item__flame__box__size
               = image_tag item.image.image1.url, alt: item.name, class: "pickup-cont__item__flame__box__size"
+              - if Item.find(item.id).trade.trade_status == "sold_out"
+                .sout
+                .tx sold
             .pickup-cont__item__flame__box__body
               .pickup-cont__item__flame__box__body__name
-                = item.name
+                = item.name.truncate(25)
               .pickup-cont__item__flame__box__body__num
                 .pickup-cont__item__flame__box__body__num__val
                   = converting_to_jpy(item.price)
@@ -26,9 +29,12 @@
           = link_to item_path(item.id) do
             .pickup-cont__item__flame__box__size
               = image_tag item.image.image1.url, alt: item.name, class: "pickup-cont__item__flame__box__size"
+              - if Item.find(item.id).trade.trade_status == "sold_out"
+                .sout
+                .tx sold
             .pickup-cont__item__flame__box__body
               .pickup-cont__item__flame__box__body__name
-                = item.name
+                = item.name.truncate(25)
               .pickup-cont__item__flame__box__body__num
                 .pickup-cont__item__flame__box__body__num__val
                   = converting_to_jpy(item.price)
@@ -43,9 +49,12 @@
           = link_to item_path(item.id) do
             .pickup-cont__item__flame__box__size
               = image_tag item.image.image1.url, alt: item.name, class: "pickup-cont__item__flame__box__size"
+              - if Item.find(item.id).trade.trade_status == "sold_out"
+                .sout
+                .tx sold
             .pickup-cont__item__flame__box__body
               .pickup-cont__item__flame__box__body__name
-                = item.name
+                = item.name.truncate(25)
               .pickup-cont__item__flame__box__body__num
                 .pickup-cont__item__flame__box__body__num__val
                   = converting_to_jpy(item.price)
@@ -59,9 +68,12 @@
           = link_to item_path(item.id) do
             .pickup-cont__item__flame__box__size
               = image_tag item.image.image1.url, alt: item.name, class: "pickup-cont__item__flame__box__size"
+              - if Item.find(item.id).trade.trade_status == "sold_out"
+                .sout
+                .tx sold
             .pickup-cont__item__flame__box__body
               .pickup-cont__item__flame__box__body__name
-                = item.name
+                = item.name.truncate(25)
               .pickup-cont__item__flame__box__body__num
                 .pickup-cont__item__flame__box__body__num__val
                   = converting_to_jpy(item.price)
