@@ -21,3 +21,8 @@ crumb :profile do
   link "プロフィール"
   parent :mypage
 end
+
+crumb :destroy do
+  link "削除"
+  parent :mypage
+end
