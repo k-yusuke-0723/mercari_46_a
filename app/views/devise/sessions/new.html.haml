@@ -13,30 +13,34 @@
       .ident-main__login-form__ggl-btn{ class: ".btn-default"}
         = link_to 'Googleで登録',"#", :style=>"color:black"
     .ident-main__login-form
-      %input.ident-main__login-form__form-group__inform{placeholder: "メールアドレス"}/
-      .ident-main__login-form__form-group
-        %input.ident-main__login-form__form-group__inform{placeholder: "パスワード"}/
-      .ident-main__login-form__form-group
-        .ident-main__login-form__form-group__rc-anc
-          .ident-main__login-form__form-group__rc-anc__cbox
-          .ident-main__login-form__form-group__rc-anc__ctext
-            私はロボットではあり
-            %br>/
-            ません
-          .ident-main__login-form__form-group__rc-anc__footter
-            .ident-main__login-form__form-group__rc-anc__footter__logo-img
-            .ident-main__login-form__form-group__rc-anc__footter__logo-text reCAPTCHA
-            .ident-main__login-form__form-group__rc-anc__footter__logo-text2
-              .ident-main__login-form__form-group__rc-anc__footter__logo-text2__b1 プライバシ
-              .ident-main__login-form__form-group__rc-anc__footter__logo-text2__b2 -
-              .ident-main__login-form__form-group__rc-anc__footter__logo-text2__b3 利用規約
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .ident-main__login-form__form-group__field
+          %br
+          = f.email_field :email, autofocus: true, placeholder: "メールアドレス"
+        .ident-main__login-form__form-group__field
+          %br
+          = f.password_field :password, autocomplete: "off", placeholder: "パスワード"
         .ident-main__login-form__form-group
-          .ident-main__login-form__form-group__login-btn ログイン
-          .ident-main__login-form__form-group__pass-forget パスワードをお忘れの方
+          .ident-main__login-form__form-group__rc-anc
+            .ident-main__login-form__form-group__rc-anc__cbox
+            .ident-main__login-form__form-group__rc-anc__ctext
+              私はロボットではあり
+              %br>/
+              ません
+            .ident-main__login-form__form-group__rc-anc__footter
+              .ident-main__login-form__form-group__rc-anc__footter__logo-img
+              .ident-main__login-form__form-group__rc-anc__footter__logo-text reCAPTCHA
+              .ident-main__login-form__form-group__rc-anc__footter__logo-text2
+                .ident-main__login-form__form-group__rc-anc__footter__logo-text2__b1 プライバシ
+                .ident-main__login-form__form-group__rc-anc__footter__logo-text2__b2 -
+                .ident-main__login-form__form-group__rc-anc__footter__logo-text2__b3 利用規約
+        .actions.ident-main__login-form__form-group__login-btn
+          = f.submit "ログイン", class: "btn-red"
+        .ident-main__login-form__form-group__pass-forget パスワードをお忘れの方
     = render "shared/userFootters"
 
 
-
+    / SNS認証はデプロイ環境で動かせない為コメントアウト
     / .ident-main__login-form__fb-btn{ class: ".btn-default"}
     /     = link_to 'facebookで登録', user_facebook_omniauth_authorize_path, :style=>"color:white"
     /   .ident-main__login-form__ggl-btn{ class: ".btn-default"}
