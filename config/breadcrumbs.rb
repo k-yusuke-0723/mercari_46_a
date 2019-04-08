@@ -26,3 +26,8 @@ crumb :destroy do
   link "削除"
   parent :mypage
 end
+
+crumb :item_show do |item|
+  link "#{item.name}"
+  parent :root
+end
