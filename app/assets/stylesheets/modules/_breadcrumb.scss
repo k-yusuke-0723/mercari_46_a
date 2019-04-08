@@ -1,5 +1,4 @@
 .bread-area {
-  width: 1440px;
   height: 52px;
   border-top: 1px solid #eee;
   border-bottom: 3px solid rgba(0,0,0,0.16);
@@ -9,8 +8,8 @@
 }
 .bread-crumbs {
   width: 1020px;
-  height: 52px;
   margin: 0 auto;
+  vertical-align: middle;
     & a {
     color: #333;
     text-decoration: none;
