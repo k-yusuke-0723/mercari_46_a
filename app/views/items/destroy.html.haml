@@ -1,6 +1,8 @@
 = render "shared/headerLogin"
 .wrapper
-  = render "shared/breadCrumbs"
+  .bread-crumbs
+    - breadcrumb :destroy
+    = breadcrumbs separator: " &gt"
   .l-contener-logout
     .l-contener-logout__box
       .l-contener-logout__box__btn

@@ -1,4 +1,7 @@
 .footer-sell-btn
-  .footer-sell-btn__wrapper.sell-btn
-    %div 出品
+  .footer-sell-btn__wrapper
+  .sell-btn
+    %div
+      = link_to '出品', new_item_path, :style=>"color:white"
     %i.fas.fa-camera.fa-3x
+
