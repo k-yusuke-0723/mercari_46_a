@@ -93,7 +93,7 @@
                       発送元の地域
                       %span.form-require 必須
                     .select-wrap
-                      = f.collection_select :shipping_source_area, Prefecture.all, :id, :name, {}, {class: "select-default"}
+                      = f.collection_select :shipping_source_area, Prefecture.all, :name, :name, {}, {class: "select-default"}
                       %i.icon-arrow-bottom
                   .form-group
                     %label
