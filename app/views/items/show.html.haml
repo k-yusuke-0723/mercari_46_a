@@ -1,6 +1,12 @@
 %title 商品詳細ページ - メルカリ スマホでかんたん フリマアプリ
 .contents
-  = render "shared/header"
+
+  = render "shared/headerLogin"
+  .bread-area
+    .bread-crumbs
+      - breadcrumb :item_show, @item
+      = breadcrumbs separator: " &gt"
+
   .product-contents
     .product-contents__flame
       .product-contents__flame__thema
