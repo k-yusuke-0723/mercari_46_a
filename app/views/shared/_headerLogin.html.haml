@@ -2,7 +2,7 @@
   .header-innner
     .clearfix
       %h1.logo-left
-        =link_to "https:mercari.com/jp/" do
+        =link_to root_path do
           =image_tag("//www-mercari-jp.akamaized.net/assets/img/common/common/logo.svg?3703848211", width: 134, height: 36, alt: "mercari")
       %form.header-form.logo-right{:action => "https://www.mercari.com/jp/search/"}
         %input.input-default{:name => "keyword", :placeholder => "キーワードから探す", :type => "search", :value => ""}/
@@ -12,25 +12,21 @@
         %ul.header-nav
           %li
             %h2
-              %a.header-nav-root{:href => "https://www.mercari.com/jp/category/"} カテゴリーから探す
+              %a.header-nav-root{:href => ""} カテゴリーから探す
           %li
             %h2
-              %a.header-nav-root{:href => "https://www.mercari.com/jp/brand/"} ブランドから探す
+              %a.header-nav-root{:href => ""} ブランドから探す
       .logo-right
         %ul.header-user-nav
-          %li
-            %a.sp-header-user-icon.header-nav-root{href: "https://www.mercari.com/jp/mypage/"}
-              %figure
-                %div
-                  =image_tag("//static.mercdn.net/thumb/members/460860652.jpg?1417996758", width: 32, alt: "")
-              %div マイページ
-          %li{data: {id: "header-user-nav", key: "notification_list", url: "https://www.mercari.com/jp/mypage/notification_and_todo_json/"}}
-            %a.header-nav-root{"data-url": "https://www.mercari.com/jp/mypage/notification_and_todo_json/", href: "https://www.mercari.com/jp/mypage/notification/"}
+          %li{data: {id: "header-user-nav", key: "notification_list"}}
+            = link_to "マイページ", mypage_path(current_user.id)
+          %li{data: {id: "header-user-nav", key: "notification_list"}}
+            %a.header-nav-root
               %i.far.fa-bell
               %span お知らせ
             %ul.header-user-box.header-notification-box.mypage-item-list{data: {id: "header-user-items"}}
           %li{data: {id: "header-user-nav", key: "todo_list", url: "https://www.mercari.com/jp/mypage/notification_and_todo_json/"}}
-            %a.header-nav-root{"data-url": "https://www.mercari.com/jp/mypage/notification_and_todo_json/", href: "https://www.mercari.com/jp/mypage/todo/"}
+            %a.header-nav-root
               %i.fas.fa-check
               %span やることリスト
             %ul.header-user-box.header-todo-box.mypage-item-list{data: {id: "header-user-items"}}

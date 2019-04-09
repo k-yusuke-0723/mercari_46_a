@@ -1,85 +1,117 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :nickname
-    %br/
-    = f.text_field :nickname, autofocus: true
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .field
-    = f.label :first_name
-    %br/
-    = f.text_field :first_name
-  .field
-    = f.label :last_name
-    %br/
-    = f.text_field :last_name
-  .field
-    = f.label :first_name_kana
-    %br/
-    = f.text_field :first_name_kana
-  .field
-    = f.label :last_name_kana
-    %br/
-    = f.text_field :last_name_kana
-  .field
-    = f.label :birthday_year
-    %br/
-    = f.text_field :birthday_year
-  .field
-    = f.label :birthday_month
-    %br/
-    = f.text_field :birthday_month
-  .field
-    = f.label :birthday_day
-    %br/
-    = f.text_field :birthday_day
-  .field
-    = f.label :postcode
-    %br/
-    = f.text_field :postcode
-  .field
-    = f.label :prefecture
-    %br/
-    = f.text_field :prefecture
-  .field
-    = f.label :city
-    %br/
-    = f.text_field :city
-  .field
-    = f.label :block
-    %br/
-    = f.text_field :block
-  .field
-    = f.label :building
-    %br/
-    = f.text_field :building
-  .field
-    = f.label :phone_number
-    %br/
-    = f.text_field :phone_number
-  .field
-    = f.label :biography
-    %br/
-    = f.text_field :biography
-  .field
-    = f.label :user_image
-    %br/
-    = f.text_field :user_image
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+%main.single-container__sign-up-main
+  %section.single-container__sign-up-main__container
+    %h2.single-container__sign-up-main__container__head
+      会員情報入力
+    .single-container__sign-up-main__container__form
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      .single-container__sign-up-main__container__form__content
+        .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :名前
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder: "例）メルカリ太郎"
+
+        .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :メールアドレス
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "PC・携帯どちらでも可"
+
+        .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :パスワード
+          - if @minimum_password_length
+            %em
+              (#{@minimum_password_length} 文字以上)
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.password_field :password, autocomplete: "new-password", placeholder: "6文字以上"
+
+        .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :パスワード確認
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "6文字以上"
+
+        .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :姓（全角）
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "例）山田"
+
+          .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :名（全角）
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :first_name, autofocus: true, autocomplete: "first_name", placeholder: "例）太郎"
+
+          .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :姓かな（全角）
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :last_name_kana, autofocus: true, autocomplete: "last_name_kana", placeholder: "例）やまだ"
+
+          .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :名かな（全角）
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :first_name_kana, autofocus: true, autocomplete: "first_name_kana", placeholder: "例）たろう"
+
+          .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :誕生日（年）
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :birthday_year, autofocus: true, autocomplete: "birthday_year", placeholder: "例）1991"
+
+          .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :誕生日（月）
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :birthday_month, autofocus: true, autocomplete: "birthday_month", placeholder: "例）7"
+
+          .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :誕生日（日）
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :birthday_day, autofocus: true, autocomplete: "birthday_day", placeholder: "例）8"
+
+          .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :郵便番号
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :postcode, autofocus: true, autocomplete: "postcode", placeholder: "例）542-0081"
+
+          .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :住所（県）
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :prefecture, autofocus: true, autocomplete: "prefecture", placeholder: "例）大阪"
+
+          .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :住所（市）
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :city, autofocus: true, autocomplete: "city", placeholder: "例）大阪市"
+
+          .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :番地
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :block, autofocus: true, autocomplete: "block", placeholder: "例）中央区南船場2-6-28"
+
+          .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :建物名、部屋番号
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :last_name, autofocus: true, autocomplete: "last_name", placeholder: "例）ユタカビル７階"
+
+          .single-container__sign-up-main__container__form__content__group
+          .single-container__sign-up-main__container__form__content__group__lavel
+          = f.label :電話番号
+          %span.single-container__sign-up-main__container__form__content__group__require 必須
+          = f.text_field :phone_number, autofocus: true, autocomplete: "phone_number", placeholder: "例）000-1111-2222"
+
+        .single-container__sign-up-main__container__form__content__group
+          .g-recaptcha.login-captcha{"data-sitekey" => "6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc"}
+            %iframe{src: "https://www.google.com/recaptcha/api2/anchor?ar=2&k=6LfZGCYTAAAAAHoK-s7Lg5OdYg5Fq4susvALmZoc&co=aHR0cHM6Ly93d3cubWVyY2FyaS5jb206NDQz&hl=ja&v=v1545073489967&size=normal&cb=n5hzazh4yje1", width: "304px", height: "78px", role: "presentation",name: "a-h3xm357f4j0s",frameborder: "0",scrolling: "no",sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"}
+        = f.submit "次へ進む", class: "btn-default btn-red"
