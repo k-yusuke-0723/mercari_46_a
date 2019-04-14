@@ -3,8 +3,9 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :destroy, :edit, :update]
 
   def index
-    @user = current_user
-    redirect_to edit_user_registration_path unless @user.valid?
+    # SNS認証のための制御
+    # @user = current_user
+    # redirect_to edit_user_registration_path unless @user.valid?
     @items = Item.order('id DESC').limit(4)
     @images = Image.order('id DESC').limit(4)
   end
