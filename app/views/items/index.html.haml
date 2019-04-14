@@ -1,4 +1,7 @@
-= render "shared/headerLogin"
+- if user_signed_in?
+  = render "shared/headerLogin"
+- else
+  = render "shared/header"
 .top-banner
 .pickup-cont
   .pickup-cont__thema ピックアップカテゴリー
