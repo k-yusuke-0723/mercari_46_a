@@ -1,7 +1,10 @@
 %title 商品詳細ページ - メルカリ スマホでかんたん フリマアプリ
 .contents
 
-  = render "shared/headerLogin"
+  - if user_signed_in?
+    = render "shared/headerLogin"
+  - else
+    = render "shared/header"
   .bread-area
     .bread-crumbs
       - breadcrumb :item_show, @item
@@ -84,7 +87,9 @@
         .product-contents__flame__valbox__post 送料込み
       / 購入ボタン
       .product-contents__flame__buy
-        - if user_signed_in? && current_user.id == @item.user_id
+        -if !user_signed_in?
+          =link_to "購入画面に進む", new_user_session_path, class: "product-contents__flame__buy__edit"
+        - elsif user_signed_in? && current_user.id == @item.user_id
           = link_to "編集画面に進む", edit_item_path(@item.id), method: :get, class: "product-contents__flame__buy__edit"
         - else
           - if @item.trade.exhibition?
